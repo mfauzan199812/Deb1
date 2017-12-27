@@ -1,29 +1,29 @@
 #!/bin/bash
-wget -O /root/reboot_otomatis.sh "http://skrip.kerdunet.info/conf/debian/rebotauto.sh"
+wget -O /root/reboot_otomatis.sh "https://raw.githubusercontent.com/DomeiNokiO/xsped/master/conf/rebotauto.sh"
 chmod +x /root/reboot_otomatis.sh
-source="http://skrip.kerdunet.info"
+source="https://raw.githubusercontent.com/DomeiNokiO/xsped/master"
 cd /usr/local/bin
-wget -O bench $source/app/debian/bench-network.sh
+wget -O bench "https://raw.githubusercontent.com/DomeiNokiO/xsped/master/file/bench-network.sh"
 wget -O mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
-wget -O userlog $source/conf/debian/userlog.sh
-wget -O lock $source/conf/debian/lock.sh
-wget -O usernew $source/conf/debian/usernew.sh
-wget -O hapus $source/conf/debian/hapus.sh
-wget -O userlimit $source/conf/debian/userlimit.sh
-wget -O renew $source/conf/debian/renew.sh
-wget -O userlist $source/conf/debian/userlist.sh
-wget -O trial $source/conf/debian/trial.sh
-wget -O baned $source/conf/debian/baned.sh
-wget -O unbaned $source/conf/debian/unbaned.sh
-wget -O menu $source/conf/debian/menu.sh
-wget -O userexp $source/conf/debian/userexp.sh
-wget -O gantipass $source/conf/debian/gantipass.sh
-wget -O gen $source/conf/debian/generate.sh
-wget -O tendang $source/conf/debian/tendang.sh
-wget -O hapususerexp $source/conf/debian/hapususerexp.sh
-wget -O speedtest $source/app/debian/speedtest_cli.py
+wget -O userlog $source/conf/userlog.sh
+wget -O lock $source/conf/lock.sh
+wget -O usernew $source/conf/usernew.sh
+wget -O hapus $source/conf/hapus.sh
+wget -O userlimit $source/conf/userlimit.sh
+wget -O renew $source/conf/renew.sh
+wget -O userlist $source/conf/userlist.sh
+wget -O trial $source/conf/trial.sh
+wget -O baned $source/conf/baned.sh
+wget -O unbaned $source/conf/unbaned.sh
+wget -O menu $source/conf/menu.sh
+wget -O userexp $source/conf/userexp.sh
+wget -O gantipass $source/conf/gantipass.sh
+wget -O gen $source/conf/generate.sh
+wget -O tendang $source/conf/tendang.sh
+wget -O hapususerexp $source/conf/hapususerexp.sh
+wget -O speedtest $source/conf/speedtest_cli.py
 echo "python /usr/bin/speedtest.py --share" | tee speedtest
-wget -O speedtest $source/app/debian/speedtest_cli.py
+wget -O speedtest $source/conf/speedtest_cli.py
 
 chmod +x userlog
 chmod +x hapus
