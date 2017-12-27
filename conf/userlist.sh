@@ -6,7 +6,7 @@ if [[ $USER != 'root' ]]; then
 fi
 vps="adityawg";
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
-wget -q -O adit http://skrip.kerdunet.info/notfound.txt
+wget -q -O adit https://raw.githubusercontent.com/DomeiNokiO/xsped/master/adt.txt
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
