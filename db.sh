@@ -121,7 +121,7 @@ service ssh restart
 # dropbear
 apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=777/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=22507/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 80 -p 110 -p 109"/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="\/etc\/baner"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
@@ -244,8 +244,8 @@ echo "0 */1 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcac
 # ovpn
 wget https://raw.githubusercontent.com/DomeiNokiO/xsped/master/file/openVepeEn.sh && bash openVepeEn.sh
 # skrup
-wget http://skrip.kerdunet.info/update.sh && bash update.sh
-wget http://skrip.kerdunet.info/swap.sh && bash swap.sh
+wget https://raw.githubusercontent.com/DomeiNokiO/xsped/master/update.sh && bash update.sh
+
  # finishing
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
