@@ -1,23 +1,55 @@
 #!/bin/bash
+
+if [[ $USER != "root" ]]; then
+	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	exit
+fi
+
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+#MYIP=$(wget -qO- ipv4.icanhazip.com);
+
+# get the VPS IP
+#ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+
+#MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-source="https://scrip.kerdunet.info";
+ether=`ifconfig | cut -c 1-8 | sort | uniq -u | grep venet0 | grep -v venet0:`
+if [[ $ether = "" ]]; then
+        ether=eth0
+fi
 
-# root
+#vps="zvur";
+vps="blangkon";
+
+#if [[ $vps = "zvur" ]]; then
+	#source="http://"
+#else
+	source="https://raw.githubusercontent.com/SuroDiwiryo/x"
+#fi
+
+# go to root
 cd
+
+
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
-# wget and curl
-apt-get update;apt-get -y install wget curl;
+#sed -i 's/net.ipv6.conf.all.disable_ipv6 = 0/net.ipv6.conf.all.disable_ipv6 = 1/g' /etc/sysctl.conf
+#sed -i 's/net.ipv6.conf.default.disable_ipv6 = 0/net.ipv6.conf.default.disable_ipv6 = 1/g' /etc/sysctl.conf
+#sed -i 's/net.ipv6.conf.lo.disable_ipv6 = 0/net.ipv6.conf.lo.disable_ipv6 = 1/g' /etc/sysctl.conf
+#sed -i 's/net.ipv6.conf.eth0.disable_ipv6 = 0/net.ipv6.conf.eth0.disable_ipv6 = 1/g' /etc/sysctl.conf
+#sysctl -p
 
+# install wget and curl
+apt-get update;apt-get -y install wget curl;
+apt-get install gem
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -26,11 +58,11 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 # set repo
-wget -O /etc/apt/sources.list $source/file/sources.list.debian7
-wget "http://www.dotdeb.org/dotdeb.gpg"
-wget "http://www.webmin.com/jcameron-key.asc"
-cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
-cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
+#wget -O /etc/apt/sources.list $source/debian7/sources.list.debian7
+#wget http://www.dotdeb.org/dotdeb.gpg
+#wget http://www.webmin.com/jcameron-key.asc
+#cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
+#cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
 
 # remove unused
 apt-get -y --purge remove samba*;
@@ -38,16 +70,19 @@ apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove bind9*;
 apt-get -y --purge remove dropbear*;
+#apt-get -y autoremove;
 
 # update
-apt-get update; apt-get -y upgrade;
+apt-get update;apt-get -y upgrade;
 
 # install webserver
 apt-get -y install nginx php5-fpm php5-cli
+apt-get -y install zip tar
 
 # install essential package
 echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
+#apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
+apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
 apt-get -y install build-essential
 
 # disable exim
@@ -61,212 +96,306 @@ apt-file update
 vnstat -u -i $ether
 service vnstat restart
 
-# screenfetch
+# install screenfetch
 cd
-wget $source/file/screeftech-dev
-mv screeftech-dev /usr/bin/screenfetch
-chmod +x /usr/bin/screenfetch
-echo "clear" >> .profile
-echo "screenfetch" >> .profile
+#wget $source/debian7/screenfetch-dev
+#mv screenfetch-dev /usr/bin/screenfetch
+#chmod +x /usr/bin/screenfetch
+#echo "clear" >> .profile
+#echo "screenfetch" >> .profile
 
-# Web Server
+#text gambar
+apt-get install boxes
+
+# text pelangi
+sudo apt-get install ruby
+sudo gem install lolcat
+
+# text warna
+cd
+rm -rf /root/.bashrc
+wget -O /root/.bashrc $source/debian7/.bashrc
+
+# install webserver
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf $source/file/nginx.conf
+wget -O /etc/nginx/nginx.conf $source/debian7/nginx.conf
 mkdir -p /home/vps/public_html
+echo "<pre>Modified by adityakimura</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /home/vps/public_html/index.html $source/file/index.txt
-wget -O /etc/nginx/conf.d/vps.conf $source/file/vps.conf
+wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm restart
 service nginx restart
 
-# badvpn
-wget -O /usr/bin/badvpn-udpgw $source/file/badvpn-udpgw
-if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw $source/file/badvpn-udpgw64
+#PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
+#useradd -M -s /bin/false deenie11
+#echo "deenie11:$PASS" | chpasswd
+#echo "deenie11" >> pass.txt
+#echo "$PASS" >> pass.txt
+#cp pass.txt /home/vps/public_html/
+#rm -f /root/pass.txt
+cd
+
+# install badvpn
+wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw
+if [[ $OS == "x86_64" ]]; then
+  wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw64
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
-
-# mrtg
-wget -O /etc/snmp/snmpd.conf $source/file/snmpd.conf
-wget -O /root/mrtg-mem.sh $source/file/mrtg-mem.sh
-chmod +x /root/mrtg-mem.sh
-cd /etc/snmp/
-sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
-service snmpd restart
-snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
-mkdir -p /home/vps/public_html/mrtg
-cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl $source/file/mrtg.conf >> /etc/mrtg.cfg
-sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
-sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
-indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
-if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
-if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
-if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
 cd
 
-# port ssh
-sed -i '/Port 22/a Port  143' /etc/ssh/sshd_config
-#sed -i '/Port 22/a Port  80' /etc/ssh/sshd_config
+# install mrtg
+#apt-get update;apt-get -y install snmpd;
+#wget -O /etc/snmp/snmpd.conf $source/debian7/snmpd.conf
+#wget -O /root/mrtg-mem.sh $source/debian7/mrtg-mem.sh
+#chmod +x /root/mrtg-mem.sh
+#cd /etc/snmp/
+#sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
+#service snmpd restart
+#snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
+#mkdir -p /home/vps/public_html/mrtg
+#cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
+#curl $source/debian7/mrtg.conf >> /etc/mrtg.cfg
+#sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
+#sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
+#indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
+#if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
+#if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
+#if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; env LANG=C /usr/bin/mrtg /etc/mrtg.cfg 2>&1 | tee -a /var/log/mrtg/mrtg.log ; fi
+cd
+
+# setting port ssh
+#sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+#sed -i '/Port 22/a Port 80' /etc/ssh/sshd_config
+#sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
-sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
-echo "Banner /etc/baner" >> /etc/ssh/sshd_config
+sed -i '$ i\Banner bannerssh' /etc/ssh/sshd_config
 service ssh restart
 
-# dropbear
-apt-get -y install dropbear
+# install dropbear
+#apt-get -y update
+#apt-get -y install dropbear
+#sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
+#sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
+#sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
+#echo "/bin/false" >> /etc/shells
+#echo "/usr/sbin/nologin" >> /etc/shells
+#service ssh restart
+#service dropbear restart
+
+apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 443 -p 80 -p 110 -p 109"/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="\/etc\/baner"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 7777"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
+sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="bannerssh"/g' /etc/default/dropbear
 service ssh restart
 service dropbear restart
+# bannerssh
+wget $source/debian7/bannerssh
+mv ./bannerssh /bannerssh
+chmod 0644 /bannerssh
+service dropbear restart
+service ssh restart
 
-# upgrad
+# upgrade dropbear 2014
 apt-get install zlib1g-dev
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2016.74.tar.bz2
-bzip2 -cd dropbear-2016.74.tar.bz2  | tar xvf -
-cd dropbear-2016.74
+wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2017.75.tar.bz2
+bzip2 -cd dropbear-2017.75.tar.bz2 | tar xvf -
+cd dropbear-2017.75
 ./configure
 make && make install
 mv /usr/sbin/dropbear /usr/sbin/dropbear1
 ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 service dropbear restart
 
-# VNSTAT
-apt-get install vnstat -y
+# upgade dropbear
+#apt-get install zlib1g-dev
+#wget $source/debian7/dropbear-2017.75.tar.bz2
+#bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
+#cd dropbear-2017.75
+#./configure
+#make && make install
+#mv /usr/sbin/dropbear /usr/sbin/dropbear.old
+#ln /usr/local/sbin/dropbear /usr/sbin/dropbear
+#service dropbear restart
+#cd && rm -rf dropbear-2017.75 && rm -rf dropbear-2017.75.tar.bz2
+
+
+# install vnstat gui
 cd /home/vps/public_html/
-wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vnstat_php_frontend-1.5.1.tar.gz
-tar xf vnstat_php_frontend-1.5.1.tar.gz
+wget $source/debian7/vnstat_php_frontend-1.5.1.tar.gz
+tar xvfz vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
 cd vnstat
-if [[ `ifconfig -a | grep "venet0"` ]]
-then
-cekvirt='OpenVZ'
-elif [[ `ifconfig -a | grep "venet0:0"` ]]
-then
-cekvirt='OpenVZ'
-elif [[ `ifconfig -a | grep "venet0:0-00"` ]]
-then
-cekvirt='OpenVZ'
-elif [[ `ifconfig -a | grep "venet0-00"` ]]
-then
-cekvirt='OpenVZ'
-elif [[ `ifconfig -a | grep "eth0"` ]]
-then
-cekvirt='KVM'
-elif [[ `ifconfig -a | grep "eth0:0"` ]]
-then
-cekvirt='KVM'
-elif [[ `ifconfig -a | grep "eth0:0-00"` ]]
-then
-cekvirt='KVM'
-elif [[ `ifconfig -a | grep "eth0-00"` ]]
-then
-cekvirt='KVM'
-fi
-if [ $cekvirt = 'KVM' ]; then
-	sed -i 's/eth0/eth0/g' config.php
-	sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" config.php
-	sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
-	sed -i 's/Internal/Internet/g' config.php
-	sed -i '/SixXS IPv6/d' config.php
-	cd
-elif [ $cekvirt = 'OpenVZ' ]; then
-	sed -i 's/eth0/venet0/g' config.php
-	sed -i "s/\$iface_list = array('venet0', 'sixxs');/\$iface_list = array('venet0');/g" config.php
-	sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
-	sed -i 's/Internal/Internet/g' config.php
-	sed -i '/SixXS IPv6/d' config.php
-	cd
-else
-	cd
-fi
-# Ddos deflate
-wget -O- https://raw.githubusercontent.com/stylersnico/nmd/master/debian/install.sh | sh
-wget -O- https://raw.githubusercontent.com/stylersnico/nmd/master/debian/update.sh | sh
-# block all port except
-#sed -i '$ i\iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -d 127.0.0.1 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 22 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 5555 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 81 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 1922 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 22507 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 143 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 1194 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 3128 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 8000 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 8080 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp --dport 10000 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 2500 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p udp -m udp --dport 7300 -j ACCEPT' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p udp -m udp -j DROP' /etc/rc.local
-#sed -i '$ i\iptables -A OUTPUT -p tcp -m tcp -j DROP' /etc/rc.local
-# fail2ban
-apt-get -y install fail2ban;service fail2ban restart
-# BAANER
-wget -O /etc/baner $source/file/baner.txt
-# squid3
+sed -i "s/eth0/$ether/g" config.php
+sed -i "s/\$iface_list = array('venet0', 'sixxs');/\$iface_list = array($ether);/g" config.php
+sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
+sed -i 's/Internal/Internet/g' config.php
+sed -i '/SixXS IPv6/d' config.php
+cd
+
+#if [[ $ether = "eth0" ]]; then
+#	wget -O /etc/iptables.conf $source/Debian7/iptables.up.rules.eth0
+#else
+#	wget -O /etc/iptables.conf $source/Debian7/iptables.up.rules.venet0
+#fi
+
+#sed -i $MYIP2 /etc/iptables.conf;
+#iptables-restore < /etc/iptables.conf;
+
+
+# install fail2ban
+apt-get update;apt-get -y install fail2ban;service fail2ban restart
+
+# install squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf $source/file/squid.conf
+wget -O /etc/squid3/squid.conf $source/debian7/squid3.conf
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
-# webmin
+
+# install webmin
 cd
 wget http://prdownloads.sourceforge.net/webadmin/webmin_1.850_all.deb
+#wget $source/debian7/webmin_1.850_all.deb
 dpkg -i webmin_1.850_all.deb
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
 apt-get -f install
-apt-get -y -f install libxml-parser-perl
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 service webmin restart
-# autoreboot
-echo "*/10 * * * * root service dropbear restart" > /etc/cron.d/dropbear
-echo "*/10 * * * * root service squid3 restart" > /etc/cron.d/squid3
-echo "*/10 * * * * root service sshd restart" > /etc/cron.d/sshd
-echo "*/10 * * * * root service webmin restart" > /etc/cron.d/webmin
-echo "00 23 * * * root /usr/bin/lock" > /etc/cron.d/lock
-echo "0 */48 * * * root /sbin/reboot" > /etc/cron.d/reboot
-echo "0 */1 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcaches
-#echo "0 */1 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
-# ovpn
-#wget http://skrip.kerdunet.info/ovpn.sh && bash ovpn.sh
-# skrup
-wget http://skrip.kerdunet.info/update.sh && bash update.sh
-wget http://skrip.kerdunet.info/swap.sh && bash swap.sh
- # finishing
+
+##wget -O webmin-current.deb http://prdownloads.sourceforge.net/webadmin/webmin_1.760_all.deb
+#wget -O webmin-current.deb $source/debian7/webmin-current.deb
+#dpkg -i --force-all webmin-current.deb
+#apt-get -y -f install;
+##sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
+#rm -f /root/webmin-current.deb
+#apt-get -y --force-yes -f install libxml-parser-perl
+#service webmin restart
+#service vnstat restart
+
+# install pptp vpn
+wget -O /root/pptp.sh $source/debian7/pptp.sh
+chmod +x pptp.sh
+./pptp.sh
+
+# download script
+cd
+wget -O /usr/bin/benchmark $source/debian7/benchmark.sh
+wget -O /usr/bin/speedtest $source/debian7/speedtest_cli.py
+wget -O /usr/bin/ps-mem $source/debian7/ps_mem.py
+wget -O /usr/bin/dropmon $source/debian7/dropmon.sh
+wget -O /usr/bin/menu $source/debian7/menu.sh
+wget -O /usr/bin/user-active-list $source/debian7/user-active-list.sh
+wget -O /usr/bin/user-add $source/debian7/user-add.sh
+wget -O /usr/bin/user-add-pptp $source/debian7/user-add-pptp.sh
+wget -O /usr/bin/user-del $source/debian7/user-del.sh
+wget -O /usr/bin/disable-user-expire $source/debian7/disable-user-expire.sh
+wget -O /usr/bin/delete-user-expire $source/debian7/delete-user-expire.sh
+wget -O /usr/bin/banned-user $source/debian7/banned-user.sh
+wget -O /usr/bin/unbanned-user $source/debian7/unbanned-user.sh
+wget -O /usr/bin/user-expire-list $source/debian7/user-expire-list.sh
+wget -O /usr/bin/user-gen $source/debian7/user-gen.sh
+wget -O /usr/bin/userlimit.sh $source/debian7/userlimit.sh
+wget -O /usr/bin/userlimitssh.sh $source/debian7/userlimitssh.sh
+wget -O /usr/bin/user-list $source/debian7/user-list.sh
+wget -O /usr/bin/user-login $source/debian7/user-login.sh
+wget -O /usr/bin/user-pass $source/debian7/user-pass.sh
+wget -O /usr/bin/user-renew $source/debian7/user-renew.sh
+wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
+wget -O /usr/bin/bannermenu $source/debian7/bannermenu
+wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
+cd
+
+echo "*/30 * * * * root service dropbear restart" > /etc/cron.d/dropbear
+echo "00 23 * * * root /usr/bin/disable-user-expire" > /etc/cron.d/disable-user-expire
+echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
+#echo "00 01 * * * root echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a" > /etc/cron.d/clearcacheram3swap
+echo "0 */1 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+
+cd
+chmod +x /usr/bin/benchmark
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/ps-mem
+#chmod +x /usr/bin/autokill
+chmod +x /usr/bin/dropmon
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/user-active-list
+chmod +x /usr/bin/user-add
+chmod +x /usr/bin/user-add-pptp
+chmod +x /usr/bin/user-del
+chmod +x /usr/bin/disable-user-expire
+chmod +x /usr/bin/delete-user-expire
+chmod +x /usr/bin/banned-user
+chmod +x /usr/bin/unbanned-user
+chmod +x /usr/bin/user-expire-list
+chmod +x /usr/bin/user-gen
+chmod +x /usr/bin/userlimit.sh
+chmod +x /usr/bin/userlimitssh.sh
+chmod +x /usr/bin/user-list
+chmod +x /usr/bin/user-login
+chmod +x /usr/bin/user-pass
+chmod +x /usr/bin/user-renew
+chmod +x /usr/bin/clearcache.sh
+chmod +x /usr/bin/bannermenu
+chmod +x /usr/bin/menu-update-script-vps.sh
+cd
+# swap ram
+dd if=/dev/zero of=/swapfile bs=2048 count=2048k
+# buat swap
+mkswap /swapfile
+# jalan swapfile
+swapon /swapfile
+#auto star saat reboot
+wget $source/debian7/fstab
+mv ./fstab /etc/fstab
+chmod 644 /etc/fstab
+sysctl vm.swappiness=10
+#permission swapfile
+chown root:root /swapfile 
+chmod 0600 /swapfile
+cd
+
+#ovpn
+wget -O ovpn.sh $source/debian7/installovpn.sh
+chmod +x ovpn.sh
+./ovpn.sh
+rm ./ovpn.sh
+
+usermod -s /bin/false mail
+echo "mail:ardy" | chpasswd
+useradd -s /bin/false -M adityawg
+echo "aditya:wg" | chpasswd
+# finishing
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
 service nginx start
-service php-fpm start
+service php5-fpm start
 service vnstat restart
 service snmpd restart
 service ssh restart
-service openvpn restart
 service dropbear restart
 service fail2ban restart
 service squid3 restart
 service webmin restart
-rm -rf ~/.bash_history && history -c
+
+cd
+rm -f /root/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
-rm /root/deb.sh
-rm -f /root/deb.sh
-rm /root/update.sh
-rm -f /root/update.sh
-rm /root/swap.sh
-rm -f /root/swap.sh
-rm -f /root/webmin_1.850_all.deb
-rm webmin_1.850_all.deb
-history -c
+
+# info
+
+cd ~/
+rm -f /root/x.sh
+rm -f /root/pptp.sh
+rm -f /root/ovpn.sh
+rm -f /root/dropbear-2017.75.tar.bz2
+rm -rf /root/dropbear-2017.75
+rm -f /root/IP
