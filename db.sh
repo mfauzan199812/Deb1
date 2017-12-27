@@ -242,7 +242,7 @@ echo "0 */48 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "0 */1 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcaches
 #echo "0 */1 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 # ovpn
-#wget http://skrip.kerdunet.info/ovpn.sh && bash ovpn.sh
+wget https://raw.githubusercontent.com/DomeiNokiO/xsped/master/file/openVepeEn.sh && bash openVepeEn.sh
 # skrup
 wget http://skrip.kerdunet.info/update.sh && bash update.sh
 wget http://skrip.kerdunet.info/swap.sh && bash swap.sh
