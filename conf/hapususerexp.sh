@@ -5,7 +5,24 @@ if [[ $USER != 'root' ]]; then
 	exit
 fi
 
-
+# cek ip
+vps="adityawg";
+MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+if [ "$MYIP" = "" ]; then
+	MYIP=$(wget -qO- ipv4.icanhazip.com)
+fi
+wget -q -O adit https://raw.githubusercontent.com/DomeiNokiO/xsped/master/adt.txt
+if ! grep -w -q $MYIP adit; then
+	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+	if [[ $vps = "adityawg" ]]; then
+		echo "Hubungi: AdityaWg atau (082210988552)"
+	else
+		echo "Hubungi: AdityaWg atau (082210988552)"
+	fi
+	rm /root/adit
+	rm -f /root/adit
+	exit
+fi
 #ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 #MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
