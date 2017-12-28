@@ -217,7 +217,7 @@ wget -O- https://raw.githubusercontent.com/stylersnico/nmd/master/debian/update.
 # fail2ban
 apt-get -y install fail2ban;service fail2ban restart
 # BAANER
-wget -O /etc/baner $source/file/baner.txt
+wget -O /etc/baner $source/baner.txt
 # squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf $source/file/squid.conf
@@ -261,8 +261,8 @@ service squid3 restart
 service webmin restart
 rm -rf ~/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
-rm /root/deb.sh
-rm -f /root/deb.sh
+rm /root/db.sh
+rm -f /root/db.sh
 rm /root/update.sh
 rm -f /root/update.sh
 rm /root/swap.sh
