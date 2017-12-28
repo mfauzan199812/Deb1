@@ -238,7 +238,7 @@ echo "*/10 * * * * root service squid3 restart" > /etc/cron.d/squid3
 echo "*/10 * * * * root service sshd restart" > /etc/cron.d/sshd
 echo "*/10 * * * * root service webmin restart" > /etc/cron.d/webmin
 echo "00 23 * * * root /usr/bin/lock" > /etc/cron.d/lock
-echo "0 */48 * * * root /sbin/reboot" > /etc/cron.d/reboot
+#echo "0 */48 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "0 */1 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcaches
 #echo "0 */1 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 # ovpn
