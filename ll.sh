@@ -1,5 +1,23 @@
-
 #!/bin/bash
+if [[ $USER != 'root' ]]; then
+	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	exit
+fi
+
+MYIP=$(wget -qO- ipv4.icanhazip.com)
+
+#vps="zvur";
+vps="aneka";
+
+if [[ $vps = "zvur" ]]; then
+	source="http://scripts.gapaiasa.com"
+else
+	source="https://insomnet4u.me/Cen6"
+fi
+
+# go to root
+cd
+
 
 cd
 sed -i '$ i\screen -AmdS limit /root/limit.sh' /etc/rc.local
@@ -20,9 +38,9 @@ cat > /root/limit.sh <<END3
 END3
 
 cd /usr/local/bin
-wget -O allcode.tar.gz "https://insomnet4u.me/centos6v/script/allcode.tar.gz"
-tar -xvf allcode.tar.gz
-rm -f allcode.tar.gz
+wget -O premium-script.tar.gz "https://insomnet4u.me/Cen6/script/premium-script.tar.gz"
+tar -xvf premium-script.tar.gz
+rm -f premium-script.tar.gz
 
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 
@@ -51,6 +69,8 @@ chmod +x /usr/local/bin/speedtest
 chmod +x /usr/local/bin/ram
 chmod +x /usr/local/bin/log-limit
 chmod +x /usr/local/bin/log-ban
+chmod +x /usr/local/bin/listpassword
+chmod +x /usr/local/bin/pengumuman
 chmod +x /usr/local/bin/user-generate
 chmod +x /usr/local/bin/user-list
 chmod +x /usr/local/bin/diagnosa
@@ -61,6 +81,12 @@ chmod +x /usr/local/bin/log-install
 chmod +x /usr/local/bin/menu
 chmod +x /usr/local/bin/user-auto-limit
 chmod +x /usr/local/bin/user-auto-limit-script
+chmod +x /usr/local/bin/edit-port
+chmod +x /usr/local/bin/edit-port-squid
+chmod +x /usr/local/bin/edit-port-openvpn
+chmod +x /usr/local/bin/edit-port-openssh
+chmod +x /usr/local/bin/edit-port-dropbear
+chmod +x /usr/local/bin/autokill
 chmod +x /root/limit.sh
 chmod +x /root/ban.sh
 screen -AmdS limit /root/limit.sh
@@ -68,4 +94,3 @@ screen -AmdS ban /root/ban.sh
 clear
 cd
 echo "Premium Script Telah Berhasil Di Update!"
-
