@@ -1,4 +1,14 @@
 #!/bin/bash
+red='\e[1;31m'
+            green='\e[0;32m'
+            NC='\e[0m'
+            echo "Connecting to serverkencang.com..."
+            sleep 0.2
+            echo "Checking Permision..."
+            sleep 0.3
+            echo -e "${green}Permission Accepted...${NC}"
+            sleep 1
+            echo""
 clear
 if [[ $USER != 'root' ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
@@ -189,7 +199,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	;;
 	"Nyalakan Auto Reboot VPS 12 Jam Sekali")
 	clear
-	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS-----------------------"
+	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------"
 	echo "               MODIFIED BY ADITYA (082210988552)                 "
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali"
@@ -197,10 +207,10 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	;;
 	"Nyalakan Auto Reboot VPS 1 Hari Sekali")
 	clear
-	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS-----------------------"
+	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 DAY-----------------------"
 	echo "               MODIFIED BY ADITYA (082210988552)                 "
 	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Jam Sekali"
+	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali"
 	break
 	;;
 	"Melihat Log Auto Reboot VPS")
