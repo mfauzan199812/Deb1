@@ -25,7 +25,7 @@ if ! grep -w -q $MYIP adit; then
 	exit
 fi
 echo -e "------------------ BANNED AKUN SSH & OVPN -------------------"
-echo -e "         DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+echo -e "       DEVELOPED BY Mohammad Fauzan R (089570379692)            "
 # begin of user-list
 echo "-----------------------------------"
 echo "USERNAME              EXP DATE     "
