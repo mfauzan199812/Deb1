@@ -25,7 +25,7 @@ if ! grep -w -q $MYIP adit; then
 fi
 
 echo "--------------------------- GANTI PASSWORD AKUN SSH & OVPN ---------------------------"
-echo "                      DEVELOPED BY Mohammad Fauzan R (089570379692)                        "
+echo "                   DEVELOPED BY Mohammad Fauzan R (089570379692)                        "
 echo ""
 # begin of user-list
 echo "-----------------------------------"
@@ -57,7 +57,7 @@ if [ $? -eq 0 ]; then
 		echo "Penggantian password akun [$username] Sukses"
 		echo ""
 		echo "-----------------------------------"
-		echo "Data Login:"
+		echo "Data Login SSH PREMIUM:"
 		echo "-----------------------------------"
 		echo "Host/IP: $MYIP"
                 echo -e "Dropbear Port: 22507,110,109,80"
