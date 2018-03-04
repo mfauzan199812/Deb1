@@ -22,7 +22,7 @@ if ! grep -w -q $MYIP adit; then
 fi
 
 echo "------------------------ UNBANNED USER -----------------------------"
-echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)                   "
+echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)                   "
 echo ""
 echo "--------------------------------------------------------------------"
 cat /root/banneduser.txt
