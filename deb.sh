@@ -7,7 +7,7 @@ if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-source="https://raw.githubusercontent.com/DomeiNokiO/xsped/master";
+source="https://raw.githubusercontent.com/mfauzan199812/Deb1/master";
 
 # root
 cd
@@ -242,9 +242,9 @@ echo "00 23 * * * root /usr/bin/lock" > /etc/cron.d/lock
 echo "0 */1 * * * root echo 3 > /proc/sys/vm/drop_caches" > /etc/cron.d/clearcaches
 #echo "0 */1 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 # ovpn
-wget https://raw.githubusercontent.com/DomeiNokiO/xsped/master/file/openVepeEn.sh && bash openVepeEn.sh
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/openVepeEn.sh && bash openVepeEn.sh
 # skrup
-wget https://raw.githubusercontent.com/DomeiNokiO/xsped/master/update.sh && bash update.sh
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 
  # finishing
 chown -R www-data:www-data /home/vps/public_html
