@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
 vps="adityawg";
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 if [ "$MYIP" = "" ]; then
@@ -11,20 +12,20 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
-wget -q -O adit https://raw.githubusercontent.com/DomeiNokiO/xsped/master/adt.txt
+wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.txt
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
-		echo "Hubungi: AdityaWg atau (082210988552)"
+		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	else
-		echo "Hubungi: AdityaWg atau (082210988552)"
+		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	fi
 	rm /root/adit
 	rm -f /root/adit
 	exit
 fi
 echo "--------------------------- AUTO GENERATE AKUN SSH ---------------------------"
-echo "                    DEVELOPED BY ADITYAWG (082210988552)                      "
+echo "                  DEVELOPED BY Moh Fauzan R (089570379692)                    "
 echo ""
 read -p "Berapa jumlah akun yang akan dibuat: " JUMLAH
 read -p "Berapa hari akun aktif: " AKTIF
@@ -37,8 +38,8 @@ echo "-----------------------------------------------------------------"
 echo "Data Login:"
 echo "-----------------------------------------------------------------"
 echo "Host/IP: $MYIP"
-echo "Dropbear Port: 443,109,110,80"
-echo "OpenSSH Port: 22,143"
+echo "Dropbear Port: 22507,109,110,80"
+echo "SSL/TLS Port: 443"
 echo "Squid Proxy: 8000,8080,3128"
 echo "OpenVPN: http://$MYIP:81/client.ovpn"
 
