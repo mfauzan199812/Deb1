@@ -1,9 +1,10 @@
 #!/bin/bash
+#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
 clear
 echo "------------------------ MENGECEK USER LOGIN ------------------------"
 
 
-	echo "             DEVELOPED BY ADITYA WG (082210988552)             "
+	echo "             DEVELOPED BY Moh Fauzan R (089570379692)             "
 	echo ""
 echo "                [ Checking Dropbear login ]                  ";
 echo "-------------------------------------------------------------"
