@@ -25,7 +25,7 @@ if ! grep -w -q $MYIP adit; then
 	exit
 fi
 echo "--------------------------- AUTO GENERATE AKUN SSH ---------------------------"
-echo "                  DEVELOPED BY Mohammad Fauzan R (089570379692)                    "
+echo "                DEVELOPED BY Mohammad Fauzan R (089570379692)                    "
 echo ""
 read -p "Berapa jumlah akun yang akan dibuat: " JUMLAH
 read -p "Berapa hari akun aktif: " AKTIF
