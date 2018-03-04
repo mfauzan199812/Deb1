@@ -4,7 +4,7 @@ clear
 echo "------------------------ MENGECEK USER LOGIN ------------------------"
 
 
-	echo "     DEVELOPED BY Mohammad Fauzan R (089570379692)             "
+	echo "        DEVELOPED BY Mohammad Fauzan R (089570379692)             "
 	echo ""
 echo "                [ Checking Dropbear login ]                  ";
 echo "-------------------------------------------------------------"
