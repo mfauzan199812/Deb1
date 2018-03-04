@@ -1,6 +1,5 @@
 #!/bin/bash
-#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
-
+#Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 clear
 # cek ip
 vps="adityawg";
@@ -12,9 +11,9 @@ wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.t
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
-		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
+		echo "Hubungi: Mohammad Fauzan R atau (0895703796928)"
 	else
-		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
+		echo "Hubungi: Mohammad Fauzan R atau (0895703796928)"
 	fi
 	rm /root/adit
 	rm -f /root/adit
