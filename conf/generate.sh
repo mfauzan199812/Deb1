@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
+#Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 vps="adityawg";
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 if [ "$MYIP" = "" ]; then
@@ -16,16 +16,16 @@ wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.t
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
-		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
+		echo "Hubungi: Mohammad Fauzan R atau (0895703796928)"
 	else
-		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
+		echo "Hubungi: Mohammad Fauzan R atau (0895703796928)"
 	fi
 	rm /root/adit
 	rm -f /root/adit
 	exit
 fi
 echo "--------------------------- AUTO GENERATE AKUN SSH ---------------------------"
-echo "                  DEVELOPED BY Moh Fauzan R (089570379692)                    "
+echo "                  DEVELOPED BY Mohammad Fauzan R (089570379692)                    "
 echo ""
 read -p "Berapa jumlah akun yang akan dibuat: " JUMLAH
 read -p "Berapa hari akun aktif: " AKTIF
@@ -35,7 +35,7 @@ expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 
 echo ""
 echo "-----------------------------------------------------------------"
-echo "Data Login:"
+echo "Data Login SSH PREMIUM:"
 echo "-----------------------------------------------------------------"
 echo "Host/IP: $MYIP"
 echo "Dropbear Port: 22507,109,110,80"
