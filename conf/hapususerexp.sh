@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
+#Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 if [[ $USER != 'root' ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
 	exit
