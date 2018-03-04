@@ -1,8 +1,9 @@
 #!/bin/bash
+#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
 red='\e[1;31m'
             green='\e[0;32m'
             NC='\e[0m'
-            echo "Connecting to serverkencang.com..."
+            echo "Connecting to BogelSSH..."
             sleep 0.2
             echo "Checking Permision..."
             sleep 0.3
@@ -20,13 +21,13 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
-wget -q -O adit https://raw.githubusercontent.com/DomeiNokiO/xsped/master/adt.txt
+wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.txt
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
-		echo "Hubungi: AdityaWg atau (082210988552)"
+		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	else
-		echo "Hubungi: AdityaWg atau (082210988552)"
+		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	fi
 	rm /root/adit
 	rm -f /root/adit
@@ -50,7 +51,7 @@ echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
-echo -e "\e[032;1mScript By:\e[0m AdityaWg | www.kerdunet.info"
+echo -e "\e[032;1mScript By:\e[0m Moh Fauzan R (0895703796928) | BogelSSH"
 echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan ?"
 PS3='Silahkan ketik angka pilihan anda lalu enter: '
@@ -121,7 +122,7 @@ do
 			"Nyalakan Autokill")
 		clear 
 echo "--------------------- MENGAKTIFKAN AUTOKILL ----------------------"
-echo "                MODIFIED BY ADITYA (082210988552)                 "
+echo "             MODIFIED BY Moh Fauzan R (089570379692)              "
 echo ""
 read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
 echo "* * * * * root /usr/local/bin/userlimit $MULTILOGIN2" > /etc/cron.d/userlimit1
@@ -186,7 +187,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
             "Edit Baner Login")
 	clear
 	echo "----------------------MENGEDIT BANER LOGIN-----------------------"
-	echo "               MODIFIED BY ADITYA (082210988552)                 "
+	echo "            MODIFIED BY Moh Fauzan R (089570379692)              "
 	echo ""
 	echo "-----------------------------------------------------------------"
 	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) "
@@ -200,15 +201,15 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	"Nyalakan Auto Reboot VPS 12 Jam Sekali")
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------"
-	echo "               MODIFIED BY ADITYA (082210988552)                 "
+	echo "                        MODIFIED BY Moh Fauzan R (089570379692)                           "
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali"
 	break
 	;;
 	"Nyalakan Auto Reboot VPS 1 Hari Sekali")
 	clear
-	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 DAY-----------------------"
-	echo "               MODIFIED BY ADITYA (082210988552)                 "
+	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------"
+	echo "                         MODIFIED BY Moh Fauzan R (089570379692)                          "
 	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali"
 	break
@@ -216,14 +217,14 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	"Melihat Log Auto Reboot VPS")
 	clear
 	echo "----------------------MELIHAT LOG AUTOREBOOT VPS-----------------------"
-	echo "               MODIFIED BY ADITYA (082210988552)                 "
+	echo "               MODIFIED BY Moh Fauzan R (089570379692)                 "
 	cat /root/log-reboot.txt
 	break
 	;;
 	"Mematikan Auto Reboot VPS")
 	clear
 	echo "----------------------MEMATIKAN AUTOREBOOT VPS-----------------------"
-	echo "               MODIFIED BY ADITYA (082210988552)                 "
+	echo "               MODIFIED BY Moh Fauzan R (089570379692)               "
 	rm -f /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dimatikan"
 	break
