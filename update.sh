@@ -1,9 +1,9 @@
 #!/bin/bash
-wget -O /root/reboot_otomatis.sh "https://raw.githubusercontent.com/DomeiNokiO/xsped/master/conf/rebotauto.sh"
+wget -O /root/reboot_otomatis.sh "https://raw.githubusercontent.com/mfauzan199812/Deb1/master/conf/rebotauto.sh"
 chmod +x /root/reboot_otomatis.sh
-source="https://raw.githubusercontent.com/DomeiNokiO/xsped/master"
+source="https://raw.githubusercontent.com/mfauzan199812/Deb1/master"
 cd /usr/local/bin
-wget -O bench "https://raw.githubusercontent.com/DomeiNokiO/xsped/master/file/bench-network.sh"
+wget -O bench "https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/bench-network.sh"
 wget -O mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
 wget -O userlog $source/conf/userlog.sh
 wget -O lock $source/conf/lock.sh
