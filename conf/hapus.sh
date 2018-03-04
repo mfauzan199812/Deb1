@@ -27,7 +27,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 echo "---------------------- HAPUS AKUN SSH & OVPN -----------------------"
 
-	echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+	echo "  DEVELOPED BY Mohammad Fauzan R (089570379692)            "
 echo ""
 
 # begin of user-list
