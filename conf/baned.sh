@@ -12,7 +12,7 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
-wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/xsped/master/ip.txt
+wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.txt
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
