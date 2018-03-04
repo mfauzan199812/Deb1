@@ -51,7 +51,7 @@ echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
-echo -e "\e[032;1mScript By:\e[0m Moh Fauzan R (0895703796928) | BogelSSH"
+echo -e "\e[032;1mScript By:\e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
 echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan ?"
 PS3='Silahkan ketik angka pilihan anda lalu enter: '
