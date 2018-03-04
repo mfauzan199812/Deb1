@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Script By AdityaWg (adityawg@hotmail.com) (082210988552)
 if [[ $USER != 'root' ]]; then
 	echo "Maaf, Anda harus menjalankan ini sebagai root"
 	exit
@@ -11,13 +11,13 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
-wget -q -O adit https://raw.githubusercontent.com/DomeiNokiO/xsped/master/adt.txt
+wget -q -O adit https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.txt
 if ! grep -w -q $MYIP adit; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "adityawg" ]]; then
-		echo "Hubungi: AdityaWg atau (082210988552)"
+		echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	else
-		echo "Hubungi: AdityaWg atau (082210988552)"
+                echo "Hubungi: Moh Fauzan R atau (0895703796928)"
 	fi
 	rm /root/adit
 	rm -f /root/adit
@@ -25,7 +25,7 @@ if ! grep -w -q $MYIP adit; then
 fi
 
 echo "--------------------------- GANTI PASSWORD AKUN SSH & OVPN ---------------------------"
-echo "                         DEVELOPED BY ADITYA (082210988552)                           "
+echo "                      DEVELOPED BY Moh Fauzan R (089570379692)                        "
 echo ""
 # begin of user-list
 echo "-----------------------------------"
@@ -60,9 +60,10 @@ if [ $? -eq 0 ]; then
 		echo "Data Login:"
 		echo "-----------------------------------"
 		echo "Host/IP: $MYIP"
-		echo "Dropbear Port: 443, 110, 109 ,80"
-		echo "OpenSSH Port: 22, 143"
-		echo "Squid Proxy: 8000, 8080, 3128"
+                echo -e "Dropbear Port: 22507,110,109,80"
+                echo -e "OpenSSH Port: 22,143"
+                echo -e "SSL/TLS Port: 443"
+                echo -e "Squid Proxy: 3128,8000,8080"
 		echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
 		echo "Username: $username"
 		echo "Password: $password"
