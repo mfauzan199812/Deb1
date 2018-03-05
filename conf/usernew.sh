@@ -69,6 +69,6 @@ echo -e " 5. No VISIT SITE PORN"
 echo -e " 6. No GAME PLAYSTATION"
 echo -e ""
 echo -e "Powered BY BogelSSH"
-echo -e"======================================"
+echo -e "======================================"
 echo -e ""
 fi
