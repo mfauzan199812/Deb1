@@ -34,14 +34,14 @@ today="$(date +"%Y-%m-%d")"
 expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 
 echo ""
-echo "-----------------------------------------------------------------"
+echo "======================================"
 echo "Data Login SSH PREMIUM:"
-echo "-----------------------------------------------------------------"
+echo "-----------------------------------"
 echo "Host/IP: $MYIP"
-echo "Dropbear Port: 22507,109,110,80"
-echo "SSL/TLS Port: 443"
-echo "Squid Proxy: 8000,8080,3128"
-echo "OpenVPN: http://$MYIP:81/client.ovpn"
+echo " Dropbear Port: 22507,109,110,80"
+echo " SSL/TLS Port: 443"
+echo " Squid Proxy: 8000,8080,3128"
+echo " OpenVPN: http://$MYIP:81/client.ovpn"
 
 for (( i=1; i <= $JUMLAH; i++ ))
 do
@@ -54,7 +54,8 @@ do
 done
 
 echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%m-%Y")"
-echo -e "================================================================"
+echo "----------------------------------"
+echo "======================================"
 echo -e "TOS/Terms Of Service :"
 echo -e " 1. No DDOS No HACKING"
 echo -e " 2. No CARDING No SPAMING"
@@ -64,3 +65,4 @@ echo -e " 5. No VISIT SITE PORN"
 echo -e " 6. No GAME PLAYSTATION"
 echo -e ""
 echo -e "Powered BY BogelSSH"
+echo "======================================"
