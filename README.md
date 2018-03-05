@@ -13,3 +13,6 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/stnl.sh && bash
 
 # SCRIPT AUTO INSTALL OCS PANEL
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash ocs.sh
+
+# INSTALL VPS UNTUK OCS PANEL
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb-ocs.sh && bash deb-ocs.sh
