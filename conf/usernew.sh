@@ -27,7 +27,7 @@ fi
 echo "------------------------ MEMBUAT AKUN SSH ------------------------"
 
 
-	echo "   DEVELOPED BY Mohammad Fauzan R (089570379692)           "
+	echo "      DEVELOPED BY Mohammad Fauzan R (089570379692)           "
 echo ""
 
 read -p "Isikan username: " username
@@ -61,8 +61,8 @@ echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%m-%Y")"
 echo -e "------------------------------------"
 echo -e "======================================"
 echo -e "TOS/Terms Of Service :"
-echo -e "   1. No DDOS No HACKING"
-echo -e "   2. No CARDING No SPAMING"
+echo -e "   1. No DDOS, No HACKING"
+echo -e "   2. No CARDING, No SPAMING"
 echo -e "   3. No MULTI LOGIN"
 echo -e "   4. No TORENT"
 echo -e "   5. No VISIT SITE PORN"
