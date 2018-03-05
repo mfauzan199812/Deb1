@@ -22,7 +22,7 @@ fi
 echo "--------------------- MELIHAT SEMUA AKUN SSH & OVPN -----------------------"
 
 
-	echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+	echo "            DEVELOPED BY Mohammad Fauzan R (089570379692)            "
 echo ""
 echo "-------------------------------"
 echo "USERNAME        TANGGAL EXPIRED"
