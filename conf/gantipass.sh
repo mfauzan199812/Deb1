@@ -56,8 +56,8 @@ if [ $? -eq 0 ]; then
 		echo $username:$password | chpasswd
 		echo "Penggantian password akun [$username] Sukses"
 		echo ""
-		echo "-----------------------------------"
-		echo "Data Login SSH PREMIUM:"
+		echo "======================================"
+		echo "Data Login SSH PREMIUM :"
 		echo "-----------------------------------"
 		echo "Host/IP: $MYIP"
                 echo -e "Dropbear Port: 22507,110,109,80"
@@ -68,6 +68,7 @@ if [ $? -eq 0 ]; then
 		echo "Username: $username"
 		echo "Password: $password"
 		echo "-----------------------------------"
+		echo "======================================"
 		echo -e "TOS/Terms Of Service :"
                 echo -e " 1. No DDOS No HACKING"
                 echo -e " 2. No CARDING No SPAMING"
@@ -77,6 +78,8 @@ if [ $? -eq 0 ]; then
                 echo -e " 6. No GAME PLAYSTATION"
                 echo -e ""
                 echo -e "Powered BY BogelSSH"
+                echo "======================================"
+                echo -e ""
 	else
 		echo "Penggantian password akun [$username] Gagal"
 		echo "[Password baru] & [Konfirmasi Password Baru] tidak cocok, silahkan ulangi lagi!"
