@@ -55,3 +55,12 @@ done
 
 echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%m-%Y")"
 echo -e "================================================================"
+echo -e "TOS/Terms Of Service :"
+echo -e " 1. No DDOS No HACKING"
+echo -e " 2. No CARDING No SPAMING"
+echo -e " 3. No MULTI LOGIN"
+echo -e " 4. No TORENT"
+echo -e " 5. No VISIT SITE PORN"
+echo -e " 6. No GAME PLAYSTATION"
+echo -e ""
+echo -e "Powered BY BogelSSH"
