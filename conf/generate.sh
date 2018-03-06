@@ -53,7 +53,7 @@ do
 	echo "$i. Username/Password: $USER"
 done
 
-echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%m-%Y")"
+echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%b-%Y")"
 echo "----------------------------------"
 echo "======================================"
 echo -e "Baca & Patuhi TOS/Terms Of Service :"
