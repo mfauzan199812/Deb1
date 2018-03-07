@@ -42,18 +42,18 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of results
-echo -e "--------------Selamat Datang Di Server Premium BogelSSH Team-------------------"
+echo -e "---------------- Selamat Datang Di Server Premium BogelSSH Team ---------------------"
 echo -e "System Info"
 echo -e "-----------"
-echo -e "\e[032;1mServer Ip:\e[0m ${red}MYIP"
-echo -e "\e[032;1mCPU model:\e[0m ${green}cname"
-echo -e "\e[032;1mNumber of cores:\e[0m ${purple}cores"
-echo -e "\e[032;1mCPU frequency:\e[0m ${blue}freq MHz"
+echo -e "\e[032;1mServer Ip:\e[0m $MYIP"
+echo -e "\e[032;1mCPU model:\e[0m $cname"
+echo -e "\e[032;1mNumber of cores:\e[0m $cores"
+echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
 echo -e "\e[032;1mScript By:\e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
-echo -e "-----------------------------------------------------------------"
+echo -e "-----------------------------------------------------------------------"
 echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan Admin?"
 PS3='Silahkan ketik angka pilihan anda lalu enter: '
