@@ -30,7 +30,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 echo "--------------------------------- OCS Panels Installer for Debian -------------------------------"
 
-echo "                    DEVELOPED BY ADITYAWG                   "
+echo "                    DEVELOPED BY Mohammad Fauzan R                   "
 echo ""
 echo ""
 echo "Saya perlu mengajukan beberapa pertanyaan sebelum memulai setup"
