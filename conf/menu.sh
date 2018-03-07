@@ -124,7 +124,7 @@ do
 			"Nyalakan Autokill")
 		clear 
 echo "--------------------- MENGAKTIFKAN AUTOKILL ----------------------"
-echo "             MODIFIED BY Moh Fauzan R (089570379692)              "
+echo "          MODIFIED BY Mohammad Fauzan R (089570379692)              "
 echo ""
 read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
 echo "* * * * * root /usr/local/bin/userlimit $MULTILOGIN2" > /etc/cron.d/userlimit1
