@@ -1,10 +1,15 @@
+#Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal 
+
+
 # INSTALL CERTIFICATE 
 apt-get install ca-certificates
 
 # SCRIPT AUTO INSTALL VPS DO / US(ARUBA)
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb.sh && bash deb.sh
 
+
 atau
+
 
 wget adityawg.ml/deb.sh && bash deb.sh
 
