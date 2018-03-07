@@ -42,18 +42,18 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of results
-echo -e "-----------Selamat Datang Di Server Premium BogelSSH Team----------------"
+echo -e "--------------Selamat Datang Di Server Premium BogelSSH Team-------------------"
 echo -e "System Info"
 echo -e "-----------"
-echo -e "\e[032;1mServer Ip:\e[0m $MYIP"
-echo -e "\e[032;1mCPU model:\e[0m $cname"
-echo -e "\e[032;1mNumber of cores:\e[0m $cores"
-echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
+echo -e "\e[032;1mServer Ip:\e[0m ${red}MYIP"
+echo -e "\e[032;1mCPU model:\e[0m ${green}cname"
+echo -e "\e[032;1mNumber of cores:\e[0m ${purple}cores"
+echo -e "\e[032;1mCPU frequency:\e[0m ${blue}freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
 echo -e "\e[032;1mScript By:\e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
-echo -e "-----------------------------------------"
+echo -e "-----------------------------------------------------------------"
 echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan Admin?"
 PS3='Silahkan ketik angka pilihan anda lalu enter: '
@@ -142,7 +142,7 @@ echo "* * * * * root sleep 51; /usr/local/bin/userlimit $MULTILOGIN2" >> /etc/cr
 service cron restart
 service ssh restart
 service dropbear restart
-echo "   + AUTO KILL SUDAH DI AKTIFKAN , JANGAN LUPA DINON AKTIFKAN+    "
+echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN+    "
 			break
 			;;	
 			"Matikan Autokill")
@@ -157,7 +157,7 @@ echo "   + AUTO KILL SUDAH DI AKTIFKAN , JANGAN LUPA DINON AKTIFKAN+    "
 	    service ssh restart
 	    service dropbear restart
 	clear
-echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
+echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 			break
 			;;	
 		"Ram Status")
@@ -189,7 +189,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
             "Edit Baner Login")
 	clear
 	echo "----------------------MENGEDIT BANER LOGIN-----------------------"
-	echo "            MODIFIED BY Moh Fauzan R (089570379692)              "
+	echo "           MODIFIED BY Mohammad Fauzan R (089570379692)              "
 	echo ""
 	echo "-----------------------------------------------------------------"
 	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) "
@@ -203,7 +203,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	"Nyalakan Auto Reboot VPS 12 Jam Sekali")
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------"
-	echo "                        MODIFIED BY Moh Fauzan R (089570379692)                           "
+	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                           "
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali"
 	break
@@ -211,7 +211,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	"Nyalakan Auto Reboot VPS 1 Hari Sekali")
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------"
-	echo "                         MODIFIED BY Moh Fauzan R (089570379692)                          "
+	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          "
 	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali"
 	break
@@ -219,14 +219,14 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN +--------------"
 	"Melihat Log Auto Reboot VPS")
 	clear
 	echo "----------------------MELIHAT LOG AUTOREBOOT VPS-----------------------"
-	echo "               MODIFIED BY Moh Fauzan R (089570379692)                 "
+	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)                 "
 	cat /root/log-reboot.txt
 	break
 	;;
 	"Mematikan Auto Reboot VPS")
 	clear
 	echo "----------------------MEMATIKAN AUTOREBOOT VPS-----------------------"
-	echo "               MODIFIED BY Moh Fauzan R (089570379692)               "
+	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)               "
 	rm -f /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dimatikan"
 	break
