@@ -1,4 +1,4 @@
-#Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal 
+# Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal 
 
 
 # INSTALL CERTIFICATE 
