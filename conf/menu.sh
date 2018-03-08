@@ -58,7 +58,7 @@ echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan Admin?"
 echo -e ""
 PS3='Silahkan ketik angka pilihan anda lalu enter Ya Boss: '
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Tendang Akun Yang Multi Login" "Nyalakan Autokill" "Matikan Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 1 Hari Sekali" "Melihat Log Auto Reboot VPS" "Mematikan Auto Reboot VPS" "Ganti Password VPS" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Update Script Premium Now" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Tendang Akun Yang Multi Login" "Nyalakan Autokill" "Matikan Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 1 Hari Sekali" "Melihat Log Auto Reboot VPS" "Mematikan Auto Reboot VPS" "Ganti Password VPS" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -253,11 +253,6 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 	    "Restart Squid [service squid3 restart]")
 	    service squid3 restart
 	    break
-	    ;;
-	    "Update Script Premium Now"
-	    wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh
-	    bash
-	    update.sh
 	    ;;
 	    break
 	    "Quit")
