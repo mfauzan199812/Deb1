@@ -106,7 +106,7 @@ else
 	echo "---------- OpenVPN Installer for Debian, Ubuntu, CentOS ------------"
 	echo ""
 	
-		echo "             DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)                     "
+		echo "             DEVELOPED BY Mohammad Fauzan R | (0895703796928)                     "
 	echo ""
 	echo ""
 	# OpenVPN setup and first user creation
