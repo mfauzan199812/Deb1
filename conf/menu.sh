@@ -255,7 +255,9 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 	    break
 	    ;;
 	    "Update Script Premium Now"
-	    wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
+	    wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh
+	    bash
+	    update.sh
 	    ;;
 	    break
 	    "Quit")
