@@ -254,7 +254,6 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 	    service squid3 restart
 	    break
 	    ;;
-	    break
 	    "Quit")
 	    break
 	    ;;
