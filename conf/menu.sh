@@ -44,7 +44,7 @@ up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=
 	# Output of results
 echo -e "------------------ Selamat Datang Di Server Premium BogelSSH Team ----------------------"
 echo -e ""
-echo -e "--------------
+echo -e "--------------"
 echo -e "System Info"
 echo -e "--------------------------------------"
 echo -e "\e[032;1mServer Ip:\e[0m $MYIP"
