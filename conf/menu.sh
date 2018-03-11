@@ -47,7 +47,6 @@ echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team
 echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________"
 echo -e ""
 echo -e ""
-<center>
 echo -e "-------------------"
 echo -e "${green}Informasi System${NC}"
 echo -e "----------------------------------------"
@@ -60,7 +59,6 @@ echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
 echo -e "\e[032;1mScript Mod By:\e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
 echo -e "-------------------------------------------------------------"
-</center>
 echo -e ""
 echo -e "${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?${NC}"
 echo -e "__________________________________________"
