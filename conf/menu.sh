@@ -43,7 +43,7 @@ vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of result
 echo -e ""
-echo -e "${green}_________________ Selamat Datang Di Server Premium BogelSSH Team ______________________${NC}"
+echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
 echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________"
 echo -e ""
 echo -e ""
