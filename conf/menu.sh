@@ -42,7 +42,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of results
-echo -e $blue "------------------- Selamat Datang Di Server Premium BogelSSH Team ----------------------"
+echo -e "\e[045;1m------------------- Selamat Datang Di Server Premium BogelSSH Team ----------------------"
 echo -e ""
 echo -e "---------------"
 echo -e "System Info"
@@ -56,8 +56,9 @@ echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
 echo -e "\e[032;1mScript By:\e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
 echo -e "-------------------------------------------------------------"
-echo -e $red "_________________<☠ Jangan Lupa Bahagia Ea Mblo ☠>_________________"
-echo -e $yellow""
+echo -e "
+echo -e "_________________<☠ Jangan Lupa Bahagia Hari Ini ☠>_________________"
+echo -e ""
 echo -e "Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?"
 echo -e "--------------------------------"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Ya Boss: '
