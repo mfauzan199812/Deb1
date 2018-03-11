@@ -128,12 +128,12 @@ chmod +x /usr/local/bin/hapususerexp
 # info
 clear
 echo ""  | tee -a log-install.txt
-echo "AUTOSCRIPT INCLUDE" | tee log-install.txt
+echo "AUTO SCRIPT TER INCLUDE" | tee log-install.txt
 echo "============================" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Service"  | tee -a log-install.txt
 echo "-------"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
 echo "Port Dropbear : 22507, 109, 110, 80"  | tee -a log-install.txt
 echo "Port OpenSSH  : 143, 22"  | tee -a log-install.txt
 echo "Port SSL/TLS : 443"  | tee -a log-install.txt
