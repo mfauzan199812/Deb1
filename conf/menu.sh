@@ -47,7 +47,7 @@ echo -e "------------------ Selamat Datang Di Server Premium BogelSSH Team -----
 echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________"
 echo -e ""
 echo -e ""
-echo -e "\e[032;1mTime WIB:\e[0m today="$(date +"%Y-%m-%d") "
+echo -e "\e[032;1mTime WIB:\e[0m $(date +"%Y-%m-%d) "
 echo -e ""
 echo -e "-------------------"
 echo -e "Informasi System"
