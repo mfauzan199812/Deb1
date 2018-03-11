@@ -44,8 +44,7 @@ up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=
 	# Output of result
 echo -e ""
 echo -e "${green}------------------ Selamat Datang Di Server Premium BogelSSH Team ----------------------${NC}"
-echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________"
-echo -e ""
+echo -e "${blue}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
 echo -e ""
 echo -e ""
 echo -e "-------------------"
