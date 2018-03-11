@@ -42,7 +42,7 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of results
-echo -e $blue "------------------- Selamat Datang Di Server Premium BogelSSH Team ----------------------"
+echo -e $cyan"------------------- Selamat Datang Di Server Premium BogelSSH Team ----------------------"
 echo -e ""
 echo -e "---------------"
 echo -e "System Info"
