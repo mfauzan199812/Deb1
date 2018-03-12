@@ -63,7 +63,7 @@ echo -e ""
 echo -e "${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?${NC}"
 echo -e "__________________________________________"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Ya Boss: '
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Tendang Akun Yang Multi Login" "Nyalakan Autokill" "Matikan Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 1 Hari Sekali" "Melihat Log Auto Reboot VPS" "Mematikan Auto Reboot VPS" "Ganti Password VPS" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "Nyalakan Autokill" "Matikan Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 1 Hari Sekali" "Melihat Log Auto Reboot VPS" "Mematikan Auto Reboot VPS" "Ganti Password VPS" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -96,7 +96,7 @@ do
 		clear
 		 gantipass
 			break			
-      ;;
+                        ;;
 		"Lihat Semua Akun SSH & OVPN")
 		clear
 		userlist
@@ -122,7 +122,7 @@ do
               userlog
                 break
 	          ;;
-		"Tendang Akun Yang Multi Login")
+		"Sleding Akun Yang Multi Login")
 		clear
 			tendang
 			break
