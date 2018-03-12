@@ -67,17 +67,17 @@ options=("Buat Akun SSH & OVPN (${green}usernew${NC})" "Buat Akun Trial SSH & OV
 select opt in "${options[@]}"
 do
     case $opt in
-        "Buat Akun SSH & OVPN (${green}usernew${NC})")
+        "Buat Akun SSH & OVPN")
 	 clear
            usernew
 	    break
             ;;
-            "Buat Akun Trial SSH & OVPN (trial)")
+            "Buat Akun Trial SSH & OVPN")
 	clear
 	    trial
             break
             ;;	
-            "Generate Akun SSH & OVPN (gen)")
+            "Generate Akun SSH & OVPN")
             clear
             gen
             break
