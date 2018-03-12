@@ -9,6 +9,15 @@ fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 source="https://raw.githubusercontent.com/mfauzan199812/Deb1/master";
 
+#detail nama perusahaan
+country=ID
+state=JATENG
+locality=BLORA
+organization=CEPU
+organizationalunit=BogelSSH
+commonname=BogelSSH
+email=fauzan121998@gmail.com
+
 # root
 cd
 
