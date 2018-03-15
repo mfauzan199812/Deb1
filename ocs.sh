@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 red='\e[1;31m'
             green='\e[0;32m'
             NC='\e[0m'
@@ -30,11 +31,6 @@ if ! grep -w -q $MYIP adit; then
 	fi
 	rm /root/adit
 	rm -f /root/adit
-	exit
-fi
-
-if [ $USER != 'root' ]; then
-	echo "Maaf, Anda harus menjalankan ini sebagai root"
 	exit
 fi
 
