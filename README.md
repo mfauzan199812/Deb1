@@ -1,6 +1,5 @@
-# <center>Information
-  Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal 
-
+# ** Information **
+  Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal Script Sebelumnya
 
 # INSTALL CERTIFICATE 
 apt-get install ca-certificates
@@ -9,19 +8,22 @@ apt-get install ca-certificates
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb.sh && bash deb.sh
 
 
-atau
+atau Jika Ada Eror Bisa Pake Ini
 
 
 wget adityawg.ml/deb.sh && bash deb.sh
 
-# SCRIPT AUTO INSTALL SSL
-wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/stnl.sh && bash stnl.sh
-
-# SCRIPT AUTO INSTALL OCS PANEL
-wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash ocs.sh
-
-# INSTALL VPS UNTUK OCS PANEL
+# INSTALL VPS KHUSUS UNTUK OCS PANEL SAJA
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb-ocs.sh && bash deb-ocs.sh
 
-# UpDate Script VPS
+
+# SCRIPT AUTO INSTALL SSL TUNNEL
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/stnl.sh && bash stnl.sh
+
+# SCRIPT AUTO INSTALL OCS PANEL / PANEL BOGELSSH
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash ocs.sh
+
+# UPDATE Script VPS / MENU
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
+
+# *SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni
