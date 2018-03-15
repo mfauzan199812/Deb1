@@ -25,4 +25,4 @@
  - wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
  -
 # NB :
- _ SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928
+ - SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928
