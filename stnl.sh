@@ -27,7 +27,7 @@ fi
 
 apt-get install stunnel4
 
-wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/DomeiNokiO/xsped/master/stunnel.conf"
+wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/mfauzan199812/xsped/master/stunnel.conf"
 
 openssl genrsa -out key.pem 2048
 
