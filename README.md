@@ -1,14 +1,18 @@
 # INFORMATION
   Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal Script Sebelumnya
 
+
 # INSTALL CERTIFICATE 
 apt-get install ca-certificates
+
 
 # SCRIPT AUTO INSTALL VPS DO / US(ARUBA)
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb.sh && bash deb.sh
 
 
+
 atau Jika Ada Eror Bisa Pake Ini
+
 
 
 wget adityawg.ml/deb.sh && bash deb.sh
@@ -20,10 +24,14 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/deb-ocs.sh && b
 # SCRIPT AUTO INSTALL SSL TUNNEL
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/stnl.sh && bash stnl.sh
 
+
 # SCRIPT AUTO INSTALL OCS PANEL / PANEL BOGELSSH
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash ocs.sh
+
 
 # UPDATE Script VPS / MENU
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 
-# SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni
+
+# NB :
+SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni)
