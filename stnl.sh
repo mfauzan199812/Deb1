@@ -35,7 +35,6 @@ organizationalunit=IT
 commonname=BogelSSH
 email=fauzan121998@gmail.com
 
-#membuat sertifikat
 apt-get install stunnel4
 
 wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/mfauzan199812/xsped/master/stunnel.conf"
@@ -52,7 +51,6 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 /etc/init.d/stunnel4 restart
 
-#informasi
 clear
 echo -e "__________________________"
 echo -e "Port SSL/TLS Default : 443"
