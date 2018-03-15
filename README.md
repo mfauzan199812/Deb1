@@ -1,4 +1,4 @@
-# ** Information **
+# INFORMATION
   Sebelum Eksekusi Script Ini Pastikan Vps Masih Fresh Atau Blm Terinstal Script Sebelumnya
 
 # INSTALL CERTIFICATE 
@@ -26,4 +26,4 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash 
 # UPDATE Script VPS / MENU
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 
-# *SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni
+# SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni
