@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/stnl.sh && bash
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ocs.sh && bash ocs.sh
 
 
-# UPDATE Script VPS / MENU
+# UPDATE SCRIPT VPS / MENU
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 
 
