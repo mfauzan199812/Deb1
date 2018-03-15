@@ -34,4 +34,8 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && ba
 
 
 # NB :
-SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928 atau fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni)
+SILAHKAN JIKA MAU MENYEWA ATAU MAU ICIP SCRIPT INI BISA WA 0895703796928
+
+atau
+
+fb: www.fb.com/m.fauzan.romandhoni (M Fauzan Romamdhoni)
