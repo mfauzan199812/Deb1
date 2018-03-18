@@ -174,6 +174,9 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
               ;;
 	      "Hapus Cache Ram")
 	      echo 3 > /proc/sys/vm/drop_caches
+	      clear
+	      echo "Sukses Bos Cache Ram Berhasil Dilepas"
+	      echo "______________________________________
 	      break
 	      ;;
         "Penggunaan Data Oleh User")
