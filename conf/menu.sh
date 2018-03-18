@@ -34,39 +34,6 @@ if ! grep -w -q $MYIP adit; then
 	exit
 fi
 
-function lokasi(){
-
-data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
-
-echo "User Login" | boxes -d peek | lolcat;
-echo "=================================";
-echo "Dropbear" | lolcat
-for PID in "${data[@]}"
-do
-    #echo "check $PID";
-    NUM=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | wc -l`;
-    USER=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $10}'`;
-    IP=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $12}'`;
-    if [ $NUM -eq 1 ]; then
-        echo "$USER - $IP";
-    fi
-done
-echo ""
-echo "OpenSSH" | lolcat;
-
-data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
-
-
-for PID in "${data[@]}"
-do
-        #echo "check $PID";
-        NUM=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | wc -l`;
-        USER=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | awk '{print $9}'`;
-        IP=`cat /var/log/auth.log | grep -i sshd | grep -i "Accepted password for" | grep "sshd\[$PID\]" | awk '{print $11}'`;
-        if [ $NUM -eq 1 ]; then
-                echo "$USER - $IP";
-        fi
-done
 rm -rf $HOME/bench.log
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -285,7 +252,8 @@ echo "______________________________________"
 	    break
 	    ;;
 	    "Lihat Lokasi User")
-	    lokasi
+	    clear
+	    userlog
             read -p "Ketik Salah Satu Alamat IP User: " userip
             curl ipinfo.io/$userip
             break
