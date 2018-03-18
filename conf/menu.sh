@@ -63,7 +63,7 @@ echo -e ""
 echo -e "${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?${NC}"
 echo -e "__________________________________________"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Ya Boss: '
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS " "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS " "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semua [Port, Squid, Stunnel, Webmin]" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -163,7 +163,7 @@ echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN+    "
 	    service ssh restart
 	    service dropbear restart
 	clear
-echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
+echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 			break
 			;;	
 		"Ram Status")
@@ -189,6 +189,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 			break
 			;;
         "Test Kecepatan Server")
+        clear
 	speedtest --share
 	break
             ;;
@@ -257,6 +258,10 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSKU+--------------"
 	    ;;
 	    "Restart Squid [service squid3 restart]")
 	    service squid3 restart
+	    break
+	    ;;
+	    "Restart Semua [Port, Squid, Stunnel, Webmin]"
+	    clear
 	    break
 	    ;;
 	    "Quit")
