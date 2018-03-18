@@ -260,8 +260,20 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    service squid3 restart
 	    break
 	    ;;
-	    "Restart Semua [Port, Squid, Stunnel, Webmin]"
+	    "Restart Semuanya [Port, Squid, Stunnel, Webmin]"
 	    clear
+	    service cron restart
+service nginx start
+service php-fpm start
+service vnstat restart
+service snmpd restart
+service ssh restart
+service openvpn restart
+service dropbear restart
+service fail2ban restart
+service squid3 restart
+service stunnel4 restart
+service webmin restart
 	    break
 	    ;;
 	    "Quit")
