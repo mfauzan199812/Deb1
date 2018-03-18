@@ -150,9 +150,4 @@ make
 mv /usr/local/bin/hapususerexp.x /usr/local/bin/hapususerexp
 chmod +x /usr/local/bin/hapususerexp
 
-
-# info
 clear
-echo "SILAHKAN REBOOT VPS ANDA SULTAN"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "==============================================="  | tee -a log-install.txt
