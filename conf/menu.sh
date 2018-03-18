@@ -148,7 +148,7 @@ echo "* * * * * root sleep 51; /usr/local/bin/userlimit $MULTILOGIN2" >> /etc/cr
 service cron restart
 service ssh restart
 service dropbear restart
-echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN+    "
+echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +    "
 			break
 			;;	
 			"Off Autokill")
@@ -176,7 +176,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	      clear
 	      echo 3 > /proc/sys/vm/drop_cache
 	      echo "Sukses Bos Cache Ram Berhasil Dilepas"
-	      echo "______________________________________
+	      echo "______________________________________"
 	      break
 	      ;;
         "Penggunaan Data Oleh User")
