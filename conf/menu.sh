@@ -63,7 +63,7 @@ echo -e ""
 echo -e "${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?${NC}"
 echo -e "__________________________________________"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Ya Boss: '
-options=("Buat Akun SSH & OVPN [usernew]" "Buat Akun Trial SSH & OVPN [trial]" "Generate Akun SSH & OVPN [gen]" "Perbarui Masa Aktif Akun [renew]" "Hapus Akun SSH & OVPN [hapus]" "Ganti Password Akun SSH & OVPN [gantipass]" "Lihat Semua Akun SSH & OVPN [uselist]" "Lihat Semua Akun Yang Expired [userexp]" "Kunci Akun Yang Sudah Expired [lock]" "Hapus Akun Yang Sudah Expired [hapusexp]" "Monitor Akun Yang Multi Login [userlog]" "Sleding Akun Yang Multi Login [tendang]" "On Autokill [kill on]" "Off Autokill [kill off]" "Ram Status [ramchace]" "Penggunaan Data Oleh User [data user]" "Banned Akun SSH & OVPN [banned]" "Unbanned Akun SSH & OVPN [unbanned]" "Test Kecepatan Server [speedtest.py cli]" "Edit Baner Login [baner]" "Nyalakan Auto Reboot VPS 12 Jam Sekali [on reboot 12]" "Nyalakan Auto Reboot VPS 24 Jam Sekali [on reboot 24]" "Melihat Log Auto Reboot VPS [log reboot]" "Off Auto Reboot VPS [reboot off]" "Ganti Password VPS " "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Ram Status" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS " "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -127,7 +127,7 @@ do
 			tendang
 			break
 			;;	
-			"Nyalakan Autokill")
+			"On Autokill")
 		clear 
 echo "--------------------- MENGAKTIFKAN AUTOKILL ----------------------"
 echo "          MODIFIED BY Mohammad Fauzan R (089570379692)              "
@@ -151,7 +151,7 @@ service dropbear restart
 echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN+    "
 			break
 			;;	
-			"Matikan Autokill")
+			"Off Autokill")
 		clear
 	rm -rf /etc/cron.d/userlimit1
 	rm -rf /etc/cron.d/userlimit2
