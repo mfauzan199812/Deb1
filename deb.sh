@@ -166,9 +166,9 @@ service dropbear restart
 
 # upgrad
 cd
-wget https://github.com/mfauzan199812/Deb1/blob/master/file/dropbear-2017.75.tar.bz2
+wget https://raw.githubusercontent.com/kholizsivoi/script/master/dropbear-2017.75.tar.bz2
 apt-get install zlib1g-dev
-bzip2 -cd dropbear-2017.75.tar.bz2  | tar xvf -
+bzip2 -cd dropbear-2017.75.tar.bz2 | tar xvf -
 cd dropbear-2017.75
 ./configure
 make && make install
