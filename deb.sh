@@ -165,15 +165,17 @@ service ssh restart
 service dropbear restart
 
 # upgrad
+cd
+wget https://github.com/mfauzan199812/Deb1/blob/master/file/dropbear-2017.75.tar.bz2
 apt-get install zlib1g-dev
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2016.74.tar.bz2
-bzip2 -cd dropbear-2016.74.tar.bz2  | tar xvf -
-cd dropbear-2016.74
+bzip2 -cd dropbear-2017.75.tar.bz2  | tar xvf -
+cd dropbear-2017.75
 ./configure
 make && make install
 mv /usr/sbin/dropbear /usr/sbin/dropbear1
 ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 service dropbear restart
+rm -f /root/dropbear-2017.75.tar.bz2
 
 # VNSTAT
 apt-get install vnstat -y
