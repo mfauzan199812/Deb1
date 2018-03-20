@@ -48,7 +48,7 @@ echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team
 echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
 echo -e ""
 echo -e "                 ===========Debian OS-32 & 64-bit ================"
-echo -e "               Modder Script By: Mohammad Fauzan R | Wa 0895703796928
+echo -e "               Modder Script By: Mohammad Fauzan R | Wa 0895703796928"
 echo -e "                            ---------------------"
 echo -e "                     ${green}Information System${NC}"
 echo -e "                  ----------------------------------------"
