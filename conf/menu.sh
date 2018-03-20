@@ -51,7 +51,7 @@ echo -e "                       ===========Debian OS-32 & 64-bit ===============
 echo -e "                      ♦                                             ♦"
 echo -e "                      ♦  ${red}AUTOSCRIPT CREATED BY Mohammad Fauzan R${NC}    ♦"
 echo -e "	               ♦                     &                       ♦"
-echo -e "	               ♦             - BogelSSH Team -               ♦
+echo -e "	               ♦             - BogelSSH Team -               ♦"
 echo -e "                      ♦       ----------Contact Me-----------       ♦"
 echo -e "                      ♦           Whatsapp: 0895703796928           ♦"
 echo -e "                      ♦   http://facebook.com/m.fauzan.romandhoni   ♦"
