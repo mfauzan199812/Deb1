@@ -183,12 +183,21 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
             break
               ;;
 	      "Hapus Cache Ram")
-	      echo 3 > /proc/sys/vm/drop_cache
 	      clear
-echo "Sukses Bos Cache Ram Berhasil Dilepas"
-echo "______________________________________"
-	      break
-	      ;;
+	echo "Sebelum..." 
+        free -h
+	echo 1 > /proc/sys/vm/drop_caches
+	sleep 1
+	echo 2 > /proc/sys/vm/drop_caches
+	sleep 1
+	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
+	sleep 1
+	echo ""
+	echo "Sesudah..." 
+	free -h
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
+        break
+	;;
         "Penggunaan Data Oleh User")
         myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`
         myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`
