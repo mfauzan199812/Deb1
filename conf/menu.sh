@@ -44,7 +44,7 @@ up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=
 	# Output of result
 echo -e ""
 echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
-echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________"
+echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
 echo -e ""
 echo -e ""
 echo -e "-------------------"
@@ -57,13 +57,13 @@ echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "\e[032;1mSystem uptime:\e[0m $up"
-echo -e "\e[032;1mScript Mod By: \e[0m Mohammad Fauzan R (0895703796928) | BogelSSH TEAM"
+echo -e "\e[032;1mScript Mod By: \e[0m ${green}Mohammad Fauzan R (0895703796928) | BogelSSH TEAM${NC}"
 echo -e "-------------------------------------------------------------"
 echo -e ""
 echo -e "${red}Apa Yang Ingin Anda Lakukan Sekarang Ini Sultan?${NC}"
 echo -e "__________________________________________"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Ya Boss: '
-options=("${red}Buat Akun SSH & OVPN${NC}" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
