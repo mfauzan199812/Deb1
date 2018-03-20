@@ -49,7 +49,7 @@ echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>____
 echo -e "${green}                ============ Os Debian 32-bit & 64-bit ============${NC}"
 echo -e "${red}                                 | Modder Script |${NC}"
 echo -e "${green}                        Mohammad Fauzan R | Wa 0895703796928${NC}"
-echo -e "                              ----------------------${NC}"
+echo -e "${red}                              ----------------------${NC}"
 echo -e "                             |  Information System  |${NC}"
 echo -e "${red}                      ---------------------------------------${NC}"
 echo -e "                           | \e[032;1mServer Ip:\e[0m $MYIP |"
