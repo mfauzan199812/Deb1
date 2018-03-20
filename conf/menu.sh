@@ -2,7 +2,7 @@
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
             red='\e[1;31m'
             green='\e[0;32m'
-	    blue='\e[0;24m'
+	    blue='\e[1;24m'
             NC='\e[0m'
             echo "Connecting to BogelSSH TEAM..."
             sleep 0.2
