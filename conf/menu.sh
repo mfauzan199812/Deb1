@@ -34,13 +34,6 @@ if ! grep -w -q $MYIP mfauzan; then
 	exit
 fi
 
-# Edit Terminal
-blue='\e[1;34m'
-green='\e[0;23m'
-purple='\e[1;35m'
-cyan='\e[1;36m'
-red='\e[1;32m'
-
 rm -rf $HOME/bench.log
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
