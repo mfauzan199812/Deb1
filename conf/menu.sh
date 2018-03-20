@@ -1,7 +1,8 @@
 #!/bin/bash
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
-red='\e[1;31m'
+            red='\e[1;31m'
             green='\e[0;32m'
+	    blue='\e[0;24m'
             NC='\e[0m'
             echo "Connecting to BogelSSH TEAM..."
             sleep 0.2
@@ -56,7 +57,7 @@ echo -e "\e[032;1mNumber of cores:\e[0m $cores"
 echo -e "\e[032;1mCPU frequency:\e[0m $freq MHz"
 echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "\e[032;1mTotal amount of swap:\e[0m $vram MB"
-echo -e "\e[032;1mSystem uptime:\e[0m $up"
+echo -e "\e[032;1mSystem uptime:\e[0m ${blue}$up${NC}"
 echo -e "\e[032;1mScript Mod By: \e[0m ${green}Mohammad Fauzan R (0895703796928) | BogelSSH TEAM${NC}"
 echo -e "-------------------------------------------------------------"
 echo -e ""
