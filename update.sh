@@ -72,7 +72,7 @@ chmod +x userexp
 chmod +x hapususerexp
 chmod +x tendang
 
-useradd -M -s /bin/false AdityaWg
+useradd -M -s /bin/false mfauzan
 # shc file
 cd
 apt-get install make
