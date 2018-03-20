@@ -1,7 +1,7 @@
 #!/bin/bash
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
-red='\e[1;31m'
-            green='\e[0;32m'
+red='\e[1;32m'
+            green='\e[0;23m'
             NC='\e[0m'
             echo "Connecting to BogelSSH TEAM..."
             sleep 0.2
@@ -33,6 +33,13 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
+
+# Edit Terminal
+blue='\e[1;34m'
+green='\e[0;23m'
+purple='\e[1;35m'
+cyan='\e[1;36m'
+red='\e[1;32m'
 
 rm -rf $HOME/bench.log
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
