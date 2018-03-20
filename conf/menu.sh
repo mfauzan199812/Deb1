@@ -1,7 +1,7 @@
 #!/bin/bash
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
-red='\e[1;32m'
-            green='\e[0;23m'
+red='\e[1;31m'
+            green='\e[0;32m'
             NC='\e[0m'
             echo "Connecting to BogelSSH TEAM..."
             sleep 0.2
@@ -184,7 +184,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
               ;;
 	      "Hapus Cache Ram")
 	      clear
-	echo "Sebelum..." 
+	echo "Sebelum......" 
         free -h
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1
@@ -193,9 +193,9 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
 	echo ""
-	echo "Sesudah..." 
+	echo "Sesudah......" 
 	free -h
-	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
+	echo "SUKSES EA..!!!Cache Ram Anda Sudah Di Bersihkan."
         break
 	;;
         "Penggunaan Data Oleh User")
