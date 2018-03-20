@@ -41,7 +41,7 @@ fi
 #if [[ $vps = "zvur" ]]; then
 	
 
-	source="https://raw.githubusercontent.com/DomeiNokiO/x"
+	source="https://raw.githubusercontent.com/mfauzan199812/x"
 #fi
 
 geteasyrsa () {
