@@ -212,7 +212,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
         ifconfig $myint | grep "RX bytes" | sed -e 's/ *RX [a-z:0-9]*/Received: /g' | sed -e 's/TX [a-z:0-9]*/\nTransfered: /g'
         break
         ;;
-	"Cek List Program")
+        "Cek List Program")
         clear
 	dpkg --list
         break
