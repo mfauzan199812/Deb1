@@ -95,7 +95,7 @@ do
             ;;
             "Ganti Password Akun SSH & OVPN")
 		clear
-		 gantipass
+		antipass
 			break			
                         ;;
 		"Lihat Semua Akun SSH & OVPN")
