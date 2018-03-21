@@ -94,6 +94,15 @@ mv screeftech-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
+clear
+echo -e ""
+echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
+echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
+echo -e "${green}                ============ Os Debian 32-bit & 64-bit ============${NC}"
+echo -e "${red}                                 | Modder Script |${NC}"
+echo -e "${green}                        Mohammad Fauzan R | Wa 0895703796928${NC}"
+echo -e "${red}                              ----------------------${NC}"
+echo -e ""
 
 # Web Server
 cd
