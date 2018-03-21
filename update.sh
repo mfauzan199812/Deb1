@@ -45,7 +45,6 @@ wget -O menu $source/conf/menu.sh
 wget -O userexp $source/conf/userexp.sh
 wget -O gantipass $source/conf/gantipass.sh
 wget -O gen $source/conf/generate.sh
-wget -O about $source/conf/about.sh
 wget -O tendang $source/conf/tendang.sh
 wget -O hapususerexp $source/conf/hapususerexp.sh
 wget -O speedtest $source/conf/speedtest_cli.py
@@ -59,7 +58,6 @@ chmod +x usernew
 chmod +x userlist
 chmod +x userlimit
 chmod +x gen
-chmod +x about
 chmod +x gantipass
 chmod +x renew
 chmod +x trial
@@ -146,11 +144,6 @@ make
 ./shc -f /usr/local/bin/gen
 mv /usr/local/bin/gen.x /usr/local/bin/gen
 chmod +x /usr/local/bin/gen
-cd shc-3.8.7
-make
-./shc -f /usr/local/bin/about
-mv /usr/local/bin/about.x /usr/local/bin/about
-chmod +x /usr/local/bin/about
 cd shc-3.8.7
 make
 ./shc -f /usr/local/bin/hapususerexp
