@@ -148,6 +148,11 @@ mv /usr/local/bin/gen.x /usr/local/bin/gen
 chmod +x /usr/local/bin/gen
 cd shc-3.8.7
 make
+./shc -f /usr/local/bin/about
+mv /usr/local/bin/about.x /usr/local/bin/about
+chmod +x /usr/local/bin/about
+cd shc-3.8.7
+make
 ./shc -f /usr/local/bin/hapususerexp
 mv /usr/local/bin/hapususerexp.x /usr/local/bin/hapususerexp
 chmod +x /usr/local/bin/hapususerexp
