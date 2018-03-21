@@ -316,6 +316,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    break
 	    ;;
 	    "Info This Script")
+	    clear
 	    about
 	    break
 	    ;;
