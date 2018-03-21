@@ -315,7 +315,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 	    break
 	    ;;
-	    "Info This Script"
+	    "Info This Script")
 	    about
 	    break
 	    ;;
