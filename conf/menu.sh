@@ -203,7 +203,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	echo ""
 	echo "Sesudah......" 
 	free -h
-	echo "SUKSES EA..!!!Cache Ram Anda Sudah Di Bersihkan."
+	echo "SUKSES EA SOB..!!! Cache Ram Anda Sudah Di Bersihkan."
         break
 	;;
         "Penggunaan Data Oleh User")
