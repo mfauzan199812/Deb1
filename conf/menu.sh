@@ -64,7 +64,7 @@ echo -e "                 ${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Soelt
 echo -e "${red}                    __________________________________________${NC}"
 echo -e "${green}_______________________________________________________________________________________${NC}"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan : '
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Info This Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -313,6 +313,10 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    "Update Premium Script")
 	    clear
 	    wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
+	    break
+	    ;;
+	    "Info This Script"
+	    about
 	    break
 	    ;;
 	    "Quit")
