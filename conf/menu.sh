@@ -64,7 +64,9 @@ echo -e "                 ${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Soelt
 echo -e "${red}                    __________________________________________${NC}"
 echo -e "${green}_______________________________________________________________________________________${NC}"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan : '
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Info This Script" "Quit")
+	"Cek List Program")
+	"Cek List Program")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Multi Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Auto Install Script TLS/SSL" "Auto Install Script OCS Panel Premium" "Hardisk Status" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek List Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Update Premium Script" "Info This Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -177,11 +179,16 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
                 clear
                 break
                 ;;
+                "Hardisk Satus")
+                clear
+		df -H
+                break
+                ;;
 		"Ram Status")
-		    clear
-		    free -h | grep -v + > /tmp/ramcache
-            cat /tmp/ramcache | grep -v "Swap"
-            break
+		 clear
+		 free -h | grep -v + > /tmp/ramcache
+                 cat /tmp/ramcache | grep -v "Swap"
+                 break
               ;;
 	      "Hapus Cache Ram")
 	      clear
@@ -205,6 +212,16 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
         ifconfig $myint | grep "RX bytes" | sed -e 's/ *RX [a-z:0-9]*/Received: /g' | sed -e 's/TX [a-z:0-9]*/\nTransfered: /g'
         break
         ;;
+	"Cek List Program")
+        clear
+	dpkg --list
+        break
+        ;;
+        "Cek Port Aktif")
+         clear
+	 netstat –ntulp
+         break
+	 ;;
 		"Banned Akun SSH & OVPN")	
 		clear
 	    baned
