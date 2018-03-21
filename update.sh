@@ -31,7 +31,6 @@ source="https://raw.githubusercontent.com/mfauzan199812/Deb1/master"
 cd /usr/local/bin
 wget -O bench "https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/bench-network.sh"
 wget -O mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
-wget -O about "https://github.com/mfauzan199812/Deb1/blob/master/file/about.sh"
 wget -O userlog $source/conf/userlog.sh
 wget -O lock $source/conf/lock.sh
 wget -O usernew $source/conf/usernew.sh
@@ -67,7 +66,6 @@ chmod +x speedtest
 chmod +x speedtest_cli.py
 chmod +x bench
 chmod +x mem
-chmod +x about
 chmod +x baned
 chmod +x unbaned
 chmod +x userexp
@@ -151,10 +149,5 @@ make
 ./shc -f /usr/local/bin/hapususerexp
 mv /usr/local/bin/hapususerexp.x /usr/local/bin/hapususerexp
 chmod +x /usr/local/bin/hapususerexp
-make
-./shc -f /usr/local/bin/about
-mv /usr/local/bin/about.x /usr/local/bin/about
-chmod +x /usr/local/bin/about
-cd shc-3.8.7
 
 clear
