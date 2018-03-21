@@ -94,7 +94,6 @@ mv screeftech-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
-clear
 echo -e ""
 echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
 echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
