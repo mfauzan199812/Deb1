@@ -60,7 +60,7 @@ echo -e "                          \e[032;1mTotal amount of ram:\e[0m $tram MB"
 echo -e "                          \e[032;1mTotal amount of swap:\e[0m $vram MB"
 echo -e "                          \e[032;1mSystem uptime:\e[0m $up$"
 echo -e "${red}          ----------------------------------------------------------------${NC}"
-echo -e "                  ${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?${NC}"
+echo -e "                 ${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?${NC}"
 echo -e "${red}                    __________________________________________${NC}"
 echo -e "${green}_______________________________________________________________________________________${NC}"
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan : '
