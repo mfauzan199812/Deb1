@@ -94,13 +94,6 @@ mv screeftech-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
-echo -e ""
-echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
-echo -e "${green}                ============ Os Debian 32-bit & 64-bit ============${NC}"
-echo -e "${red}                                 | Modder Script |${NC}"
-echo -e "${green}                        Mohammad Fauzan R | Wa 0895703796928${NC}"
-echo -e "${red}                              ----------------------${NC}"
-echo -e ""
 
 # Web Server
 cd
@@ -291,6 +284,7 @@ service dropbear restart
 service fail2ban restart
 service squid3 restart
 service webmin restart
+servisce stunnel4 restart
 rm -rf ~/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
 rm /root/db.sh
