@@ -22,7 +22,7 @@ if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
 wget -q -O mfauzan https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ip.txt
-if ! grep -w -q $MYIP adit; then
+if ! grep -w -q $MYIP mfauzan; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "mfauzan" ]]; then
 		echo "Hubungi: Mohammad Fauzan R atau (0895703796928)"
