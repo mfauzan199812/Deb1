@@ -331,8 +331,10 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    break
 	    ;;
 	    "Swap Virtual Ram")
+	    dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 	    mkswap /swapfile
 	    swapon /swapfile
+	    clear
 	    echo "Sukses Bos!!! Swap Virtual Ram"
 	    break
 	    ;;
