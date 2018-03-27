@@ -46,7 +46,7 @@ up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=
 echo -e ""
 echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
 echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
-echo -e "${green}                ============ Os Debian 32-bit & 64-bit ============${NC}"
+echo -e "${green}              ============= Os Debian 7 32-bit & 64-bit =============${NC}"
 echo -e "${red}                                 | Modder Script |${NC}"
 echo -e "${green}                        Mohammad Fauzan R | Wa 0895703796928${NC}"
 echo -e "${red}                              ----------------------${NC}"
