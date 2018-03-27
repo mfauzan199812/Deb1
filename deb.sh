@@ -168,7 +168,7 @@ service dropbear restart
 # VNSTAT
 apt-get install vnstat -y
 cd /home/vps/public_html/
-wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
