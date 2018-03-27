@@ -25,9 +25,7 @@ if ! grep -w -q $MYIP mfauzan; then
 	exit
 fi
 echo "------------------------ MEMBUAT AKUN SSH ------------------------"
-
-
-	echo "      DEVELOPED BY Mohammad Fauzan R (089570379692)           "
+echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)           "
 echo ""
 
 read -p "Isikan username: " username
@@ -47,7 +45,7 @@ else
 echo -e ""
 echo -e ""
 echo -e "======================================"
-echo -e "Data Login SSH PREMIUM :"
+echo -e "Data Login SSH PREMIUM"
 echo -e "------------------------------------"
 echo -e "Host/IP: $MYIP" 
 echo -e "Username: $username "
