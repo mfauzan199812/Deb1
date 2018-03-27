@@ -125,7 +125,7 @@ do
 	          ;;
 		"Sleding Akun Yang Multi Login")
 		clear
-			tendang
+		tendang
 			break
 			;;	
 			"On Autokill")
