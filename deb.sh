@@ -157,7 +157,7 @@ service dropbear restart
 
 # upgrad
 apt-get install zlib1g-dev
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2016.74.tar.bz2
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
 ./configure
