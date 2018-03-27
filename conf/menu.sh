@@ -111,6 +111,12 @@ do
 		 "Kunci Akun Yang Sudah Expired")
 	    clear
 	    lock
+	    clear
+echo "                                    _\|/_                               "
+echo "                                    (o o)                               "
+echo "---------------------------------o00-{_}-00o-----------------------     "
+echo "              + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +        "
+echo "-------------------------------------------------------------------     "
 	    break
 	    ;;
 	    "Hapus Akun Yang Sudah Expired")
@@ -120,6 +126,10 @@ do
 	    ;;
 	    "Monitor Akun Yang Multi Login")
              clear
+echo "                            _\|/_                               "
+echo "                            (o o)                               "
+echo "-------------------------o00-{_}-00o-------------------------   "
+echo "-------------------------------------------------------------   "
               userlog
                 break
 	          ;;
@@ -149,10 +159,12 @@ echo "* * * * * root sleep 51; /usr/local/bin/userlimit $MULTILOGIN2" >> /etc/cr
 service cron restart
 service ssh restart
 service dropbear restart
+clear
 echo "                                    _\|/_                               "
 echo "                                    (o o)                               "
 echo "---------------------------------o00-{_}-00o-----------------------     "
 echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +    "
+echo "-------------------------------------------------------------------     "
 			break
 			;;	
 			"Off Autokill")
@@ -167,7 +179,12 @@ echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +    "
 	    service ssh restart
 	    service dropbear restart
 	clear
-echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
+clear
+echo "                                    _\|/_                               "
+echo "                                    (o o)                               "
+echo "---------------------------------o00-{_}-00o-----------------------     "
+echo "   + AUTO KILL SUDAH DI NONAKTIFKAN BOSKU, JANGAN LUPA DI AKTIFKAN +    "
+echo "-------------------------------------------------------------------     "
 			break
 			;;	
                 "Auto Install Script TLS/SSL")
