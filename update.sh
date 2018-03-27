@@ -77,7 +77,7 @@ useradd -M -s /bin/false mfauzan
 cd
 apt-get install make
 cd
-wget https://raw.githubusercontent.com/yusuf-ardiansyah/vultur/master/shc-3.8.7.tgz
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/shc-3.8.7.tgz
 tar xvfz shc-3.8.7.tgz
 cd shc-3.8.7
 make
