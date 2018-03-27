@@ -114,12 +114,12 @@ do
 	    break
 	    ;;
 	    "Hapus Akun Yang Sudah Expired")
-	clear
+             clear
 	       hapususerexp
 	    break
 	    ;;
 	    "Monitor Akun Yang Multi Login")
-       clear
+             clear
               userlog
                 break
 	          ;;
