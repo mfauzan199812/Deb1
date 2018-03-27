@@ -239,7 +239,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
         clear
 	speedtest --share
 	break
-            ;;
+           ;;
             "Edit Baner Login")
 	clear
 	echo "----------------------MENGEDIT BANER LOGIN-----------------------"
