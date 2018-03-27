@@ -73,7 +73,7 @@ if [ $? -eq 0 ]; then
                 echo -e "======================================"
                 echo -e "Baca & Patuhi TOS/Terms Of Service"
                 echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-                echo -e "--------------------------------------
+                echo -e "--------------------------------------"
                 echo -e "_________Powered BY BogelSSH_________"
                 echo -e "======================================"
                 echo -e ""
