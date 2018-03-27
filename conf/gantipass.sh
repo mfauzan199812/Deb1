@@ -57,7 +57,7 @@ if [ $? -eq 0 ]; then
 		echo "Penggantian password akun [$username] Sukses"
 		echo ""
 		echo "======================================"
-		echo "Data Login SSH PREMIUM :"
+		echo "Data Login SSH PREMIUM"
 		echo -e "------------------------------------"
                 echo -e "Host/IP: $MYIP" 
                 echo -e "Username: $username "
