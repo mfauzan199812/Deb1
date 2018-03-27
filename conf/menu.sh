@@ -115,7 +115,7 @@ do
 echo "                                    _\|/_                               "
 echo "                                    (o o)                               "
 echo "---------------------------------o00-{_}-00o-----------------------     "
-echo "              + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +        "
+echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             "
 echo "-------------------------------------------------------------------     "
 	    break
 	    ;;
@@ -124,7 +124,7 @@ echo "-------------------------------------------------------------------     "
 	     hapususerexp
 	    break
 	    ;;
-	    "Monitor Akun Yang Multi Login")
+	    "Monitor Akun Yang Login")
              clear
 echo "                            _\|/_                               "
 echo "                            (o o)                               "
@@ -163,7 +163,7 @@ clear
 echo "                                    _\|/_                               "
 echo "                                    (o o)                               "
 echo "---------------------------------o00-{_}-00o-----------------------     "
-echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +    "
+echo " + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +      "
 echo "-------------------------------------------------------------------     "
 			break
 			;;	
@@ -183,7 +183,7 @@ clear
 echo "                                    _\|/_                               "
 echo "                                    (o o)                               "
 echo "---------------------------------o00-{_}-00o-----------------------     "
-echo "   + AUTO KILL SUDAH DI NONAKTIFKAN BOSKU, JANGAN LUPA DI AKTIFKAN +    "
+echo " + AUTO KILL SUDAH DI NONAKTIFKAN BOSKU, JANGAN LUPA DI AKTIFKAN +      "
 echo "-------------------------------------------------------------------     "
 			break
 			;;	
