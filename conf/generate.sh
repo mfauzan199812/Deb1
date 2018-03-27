@@ -35,7 +35,7 @@ expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 
 echo ""
 echo "======================================"
-echo "Data Login SSH PREMIUM :"
+echo "Data Login SSH PREMIUM"
 echo "-----------------------------------"
 echo "Host/IP: $MYIP"
 echo "    Dropbear Port: 22507, 109, 110, 80"
