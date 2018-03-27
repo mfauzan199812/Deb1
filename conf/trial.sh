@@ -28,7 +28,7 @@ password=`</dev/urandom tr -dc X-Z0-9 | head -c4`
 	useradd -M -N -s /bin/false -e $expire $username
 	echo $username:$password | chpasswd
 echo -e ""
-echo -e "======================================="
+echo -e "======================================"
 echo -e "Data Trial SSH PREMIUM"
 echo -e "-------------------------------------"
 echo -e "Host/IP: $MYIP" 
