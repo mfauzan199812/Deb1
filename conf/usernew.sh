@@ -62,7 +62,7 @@ echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")"
 echo -e "------------------------------------"
 echo -e "======================================"
 echo -e "Baca & Patuhi TOS/Terms Of Service"
-echo -e "    CARDING, TORRENT, ILEGAL CONTENT"
+echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
 echo -e "--------------------------------------
 echo -e "_________Powered BY BogelSSH_________"
 echo -e "======================================"
