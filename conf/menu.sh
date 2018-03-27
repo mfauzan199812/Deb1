@@ -331,7 +331,9 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	    break
 	    ;;
 	    "Swap Virtual Ram")
-	    swapfile
+	    mkswap /swapfile
+	    swapon /swapfile
+	    echo "Sukses Bos!!! Swap Virtual Ram"
 	    break
 	    ;;
 	    "Update Premium Script")
