@@ -6,7 +6,7 @@ if [[ $USER != 'root' ]]; then
 fi
 
 # cek ip
-vps="adityawg";
+vps="mfauzan";
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
@@ -58,7 +58,7 @@ if [ $? -eq 0 ]; then
 		echo ""
 		echo "======================================"
 		echo "Data Login SSH PREMIUM"
-		echo -e "------------------------------------------"
+		echo -e "-------------------------------------"
                 echo -e "Host/IP: $MYIP" 
                 echo -e "Username: $username "
                 echo -e "Password: $password"
@@ -69,11 +69,11 @@ if [ $? -eq 0 ]; then
                 echo -e "    Squid Proxy: 3128, 8000, 8080"
                 echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn"
                 echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")"
-                echo -e "------------------------------------------"
+                echo -e "-------------------------------------"
                 echo -e "======================================"
                 echo -e "Baca & Patuhi TOS/Terms Of Service"
                 echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-                echo -e "------------------------------------------"
+                echo -e "-------------------------------------"
                 echo -e "_________Powered BY BogelSSH_________"
                 echo -e "======================================"
                 echo -e ""
