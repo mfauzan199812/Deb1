@@ -112,11 +112,6 @@ do
 	     clear
 	    lock
 	    clear
-echo "                                    _\|/_                               "
-echo "                                    (o o)                               "
-echo "---------------------------------o00-{_}-00o-----------------------     "
-echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             "
-echo "-------------------------------------------------------------------     "
 	    break
 	    ;;
 	    "Hapus Akun Yang Sudah Expired")
