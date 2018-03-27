@@ -6,6 +6,10 @@ echo "------------------------ MENGECEK USER LOGIN ------------------------"
 
 	echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)             "
 	echo ""
+echo "                            _\|/_                               "
+echo "                            (o o)                               "
+echo "-------------------------o00-{_}-00o-------------------------   "
+echo "=============================================================   "
 echo "                [ Checking Dropbear login ]                  ";
 echo "-------------------------------------------------------------"
 echo " Date-Time    |    PID   |    User Name    |     Dari IP "
