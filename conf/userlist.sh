@@ -27,10 +27,10 @@ echo ""
 echo "-------------------------------"
 echo "USERNAME        TANGGAL EXPIRED"
 echo "-------------------------------"
-while read adityawg
+while read mfauzan
 do
-        AKUN="$(echo $adityawg | cut -d: -f1)"
-        ID="$(echo $adityawg | grep -v nobody | cut -d: -f3)"
+        AKUN="$(echo $mfauzan | cut -d: -f1)"
+        ID="$(echo $mfauzan | grep -v nobody | cut -d: -f3)"
         exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
         if [[ $ID -ge 500 ]]; then
         printf "%-17s %2s\n" "$AKUN" "$exp"
@@ -38,6 +38,6 @@ do
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 500 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "-------------------------------"
-echo "Jumlah akun: $JUMLAH user"
+echo "Jumlah Akun: $JUMLAH User"
 echo "-------------------------------"
 echo ""
