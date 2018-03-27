@@ -109,7 +109,7 @@ do
 			break
 			;;		
 		 "Kunci Akun Yang Sudah Expired")
-	    clear
+	     clear
 	    lock
 	    clear
 echo "                                    _\|/_                               "
