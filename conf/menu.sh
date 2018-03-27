@@ -149,6 +149,9 @@ echo "* * * * * root sleep 51; /usr/local/bin/userlimit $MULTILOGIN2" >> /etc/cr
 service cron restart
 service ssh restart
 service dropbear restart
+echo "                                    _\|/_                               "
+echo "                                    (o o)                               "
+echo "---------------------------------o00-{_}-00o-----------------------     "
 echo "   + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +    "
 			break
 			;;	
