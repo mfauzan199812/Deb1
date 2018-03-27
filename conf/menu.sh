@@ -287,7 +287,7 @@ echo "------------+ AUTO KILL SUDAH DI NONAKTIFKAN BOSS+--------------"
 	;;
 	    "Ganti Password VPS")
 	    read -p "Silahkan isi password baru untuk VPS anda: " pass	
-        echo "root:$pass" | chpasswd
+            echo "root:$pass" | chpasswd
 	    echo "Password vps anda berhasil diganti menjadi $pass"
 	    break
 	    ;;
