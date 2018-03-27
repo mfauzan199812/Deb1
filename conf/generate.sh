@@ -36,7 +36,7 @@ expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 echo ""
 echo "======================================"
 echo "Data Login SSH PREMIUM"
-echo "-------------------------------------------"
+echo "-------------------------------------"
 echo "Host/IP: $MYIP"
 echo "    Dropbear Port: 22507, 109, 110, 80"
 echo "    OpenSSH Port: 22,143"
@@ -56,11 +56,11 @@ do
 done
 
 echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%b-%Y")"
-echo -e "------------------------------------------"
+echo -e "-------------------------------------"
 echo -e "======================================"
 echo -e "Baca & Patuhi TOS/Terms Of Service"
 echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-echo -e "------------------------------------------
+echo -e "-------------------------------------"
 echo -e "_________Powered BY BogelSSH_________"
 echo -e "======================================"
 echo ""
