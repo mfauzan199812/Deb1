@@ -155,7 +155,7 @@ service dropbear restart
 
 # upgrad
 apt-get install zlib1g-dev
-wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2016.74.tar.bz2
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2  | tar xvf -
 cd dropbear-2016.74
 ./configure
@@ -167,7 +167,7 @@ service dropbear restart
 # VNSTAT
 apt-get install vnstat -y
 cd /home/vps/public_html/
-wget https://raw.githubusercontent.com/GegeEmbrie/autosshvpn/master/file/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
