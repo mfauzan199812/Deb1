@@ -271,6 +271,22 @@ wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/openVepeEn
 # skrup
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/update.sh && bash update.sh
 
+# swap ram
+dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+# buat swap
+mkswap /swapfile
+# jalan swapfile
+swapon /swapfile
+#auto star saat reboot
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/ram/fstab
+mv ./fstab /etc/fstab
+chmod 644 /etc/fstab
+sysctl vm.swappiness=20
+#permission swapfile
+chown root:root /swapfile 
+chmod 0600 /swapfile
+
+
  # finishing
 chown -R www-data:www-data /home/vps/public_html
 service cron restart
