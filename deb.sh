@@ -309,6 +309,6 @@ rm /root/update.sh
 rm -f /root/update.sh
 rm /root/swap.sh
 rm -f /root/swap.sh
-rm -f /root/webmin_1.850_all.deb
-rm webmin_1.850_all.deb
+rm -f /root/webmin_1.881_all.deb
+rm webmin_1.881_all.deb
 history -c
