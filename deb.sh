@@ -250,8 +250,8 @@ sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 # webmin
 cd
-wget http://prdownloads.sourceforge.net/webadmin/webmin_1.850_all.deb
-dpkg -i webmin_1.850_all.deb
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/webmin_1.881_all.deb
+dpkg -i webmin_1.881_all.deb
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
 apt-get -f install
 apt-get -y -f install libxml-parser-perl
