@@ -58,13 +58,13 @@ echo -e "                                \e[032;1mNumber of cores:\e[0m $cores" 
 echo -e "                           \e[032;1mCPU frequency:\e[0m $freq MHz" | lolcat
 echo -e "                          \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
 echo -e "                          \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
-echo -e "                          \e[032;1mSystem uptime:\e[0m $up$" | lolcatlolcat
-echo -e "          ----------------------------------------------------------------" | 
+echo -e "                          \e[032;1mSystem uptime:\e[0m $up$" | lolcat
+echo -e "          ----------------------------------------------------------------" | lolcat
 echo -e "                 Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?" | lolcat
 echo -e "                    __________________________________________" | lolcat
 echo -e "_______________________________________________________________________________________" | lolcat
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan :'
-options=("Buat Akun SSH & OVPN" | lolcat "Buat Akun Trial SSH & OVPN" | lolcat "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Kapasitas Hardisk" "Cek Memory Ram" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek Semua Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Auto Reboot VPS 12 Jam Sekali" "Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Quit")
+options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Kapasitas Hardisk" "Cek Memory Ram" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek Semua Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Auto Reboot VPS 12 Jam Sekali" "Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
