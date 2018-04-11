@@ -24,13 +24,13 @@ if ! grep -w -q $MYIP mfauzan; then
 	exit
 fi
 
-echo "--------------------------- GANTI PASSWORD AKUN SSH & OVPN ---------------------------"
-echo "                   DEVELOPED BY Mohammad Fauzan R (089570379692)                        "
+echo "--------------------------- GANTI PASSWORD AKUN SSH & OVPN ---------------------------" | lolcat
+echo "                   DEVELOPED BY Mohammad Fauzan R (089570379692)                        " | 
 echo ""
 # begin of user-list
-echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
+echo "USERNAME              EXP DATE     " | lolcat
+echo "-----------------------------------" | lolcat
 
 while read expired
 do
@@ -41,7 +41,7 @@ do
 		printf "%-21s %2s\n" "$AKUN" "$exp"
 	fi
 done < /etc/passwd
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
 echo ""
 # end of user-list
 
@@ -56,26 +56,26 @@ if [ $? -eq 0 ]; then
 		echo $username:$password | chpasswd
 		echo "Penggantian password akun [$username] Sukses"
 		echo ""
-		echo "======================================"
-		echo "Data Login SSH PREMIUM"
-		echo -e "-------------------------------------"
-                echo -e "Host/IP: $MYIP" 
-                echo -e "Username: $username "
-                echo -e "Password: $password"
-                echo -e "    Dropbear Port: 22507, 110, 109, 80"
-                echo -e "    OpenSSH Port: 22, 143"
-                echo -e "    SSL/TLS Port: 443"
-                echo -e "    Port OVPN: 5555"
-                echo -e "    Squid Proxy: 3128, 8000, 8080"
-                echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn"
-                echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")"
-                echo -e "-------------------------------------"
-                echo -e "======================================"
-                echo -e "Baca & Patuhi TOS/Terms Of Service"
-                echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-                echo -e "-------------------------------------"
-                echo -e "_________Powered BY BogelSSH_________"
-                echo -e "======================================"
+		echo "======================================" | lolcat
+		echo "Data Login SSH PREMIUM" | lolcat
+		echo -e "-------------------------------------" | lolcat
+                echo -e "Host/IP: $MYIP" | lolcat
+                echo -e "Username: $username " | lolcat
+                echo -e "Password: $password" | lolcat
+                echo -e "    Dropbear Port: 22507, 110, 109, 80" | lolcat
+                echo -e "    OpenSSH Port: 22, 143" | lolcat
+                echo -e "    SSL/TLS Port: 443" | lolcat
+                echo -e "    Port OVPN: 5555" | 
+                echo -e "    Squid Proxy: 3128, 8000, 8080" | lolcat
+                echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn" | lolcat
+                echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")" | lolcat
+                echo -e "-------------------------------------" | lolcat
+                echo -e "======================================" | lolcat
+                echo -e "Baca & Patuhi TOS/Terms Of Service" | lolcat
+                echo -e " NO CARDING, TORRENT, ILEGAL CONTENT" | lolcat
+                echo -e "-------------------------------------" | lolcat
+                echo -e "_________Powered BY BogelSSH_________" | lolcat
+                echo -e "======================================" | lolcat
                 echo -e ""
 	else
 		echo "Penggantian password akun [$username] Gagal"
