@@ -8,7 +8,7 @@ echo "                            _\|/_                               " | lolcat
 echo "                            (o o)                               " | lolcat
 echo "-------------------------o00-{_}-00o-------------------------   " | lolcat
 echo "=============================================================   " | lolcat
-echo "                [ Checking Dropbear login ]                  "; | lolcat
+echo "                [ Checking Dropbear login ]                  " | lolcat
 echo "-------------------------------------------------------------" | lolcat
 echo " Date-Time    |    PID   |    User Name    |     Dari IP " | lolcat
 echo "-------------------------------------------------------------" | lolcat
@@ -31,7 +31,7 @@ done
 echo "-------------------------------------------------------------" | lolcat
 echo ""
 echo ""
-echo "                 [ Checking OpenSSH login ]                  "; | lolcat
+echo "                 [ Checking OpenSSH login ]                  " | lolcat
 echo "-------------------------------------------------------------" | lolcat
 echo " Date-Time    |    PID   |    User Name    |     Dari IP " | lolcat
 echo "-------------------------------------------------------------" | lolcat
