@@ -48,7 +48,7 @@ echo -e "__________________|•Welcome To Server Premium BogelSSH Team•|______
 echo -e "____________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>_________________________" | lolcat
 echo -e "            ============= Os Debian 7 32-bit & 64-bit =============" | lolcat
 echo -e "                               | Modder Script |" | lolcat
-echo -e "                      Mohammad Fauzan R | Wa 0895703796928" | lolcat
+echo -e "                   | Mohammad Fauzan R | Wa 0895703796928 |" | lolcat
 echo -e "                            ----------------------" | lolcat
 echo -e "                           |  Information System  |" | lolcat
 echo -e "                    ---------------------------------------" | lolcat
@@ -60,7 +60,7 @@ echo -e "                        \e[032;1mTotal amount of ram:\e[0m $tram MB" | 
 echo -e "                        \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
 echo -e "                        \e[032;1mSystem uptime:\e[0m $up" | lolcat
 echo -e "        ----------------------------------------------------------------" | lolcat
-echo -e "                 Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?" | lolcat
+echo -e "                Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan!!" | lolcat
 echo -e "                    __________________________________________" | lolcat
 echo -e "___________________________________________________________________________________" | lolcat
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan :'
