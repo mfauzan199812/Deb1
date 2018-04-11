@@ -25,7 +25,7 @@ if ! grep -w -q $MYIP mfauzan; then
 fi
 
 echo "--------------------------- GANTI PASSWORD AKUN SSH & OVPN ---------------------------" | lolcat
-echo "                   DEVELOPED BY Mohammad Fauzan R (089570379692)                        " | 
+echo "                   DEVELOPED BY Mohammad Fauzan R (089570379692)                        " | lolcat
 echo ""
 # begin of user-list
 echo "-----------------------------------" | lolcat
@@ -65,7 +65,7 @@ if [ $? -eq 0 ]; then
                 echo -e "    Dropbear Port: 22507, 110, 109, 80" | lolcat
                 echo -e "    OpenSSH Port: 22, 143" | lolcat
                 echo -e "    SSL/TLS Port: 443" | lolcat
-                echo -e "    Port OVPN: 5555" | 
+                echo -e "    Port OVPN: 5555" | lolcat
                 echo -e "    Squid Proxy: 3128, 8000, 8080" | lolcat
                 echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn" | lolcat
                 echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")" | lolcat
