@@ -21,6 +21,6 @@ if ! grep -w -q $MYIP mfauzan; then
 fi
 
 
-echo -e "----------------- Menendang User Yg Multi Login --------------------"
+echo -e "----------------- Menendang User Yg Multi Login --------------------" | lolcat
 read -p "Berapa Multi Login Yg Akan Ditendang (1-2):" limit
 userlimit $limit
