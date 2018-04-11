@@ -275,15 +275,15 @@ echo "-------------------------------------------------------------------     " 
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                           " | lolcat
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali" | lolcat
+	echo "                  Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali" | lolcat
 	break
 	;;
-	"Auto Reboot VPS 1 Hari Sekali")
+	"Auto Reboot VPS 24 jam Sekali")
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          " | lolcat
 	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali" | lolcat
+	echo "                  Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali" | lolcat
 	break
 	;;
 	"Melihat Log Auto Reboot VPS")
@@ -298,7 +298,7 @@ echo "-------------------------------------------------------------------     " 
 	echo "----------------------MEMATIKAN AUTOREBOOT VPS-----------------------" | lolcat
 	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)               " | lolcat
 	rm -f /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dimatikan" | lolcat
+	echo "                  Auto Reboot Berhasil Dimatikan" | lolcat
 	break
 	;;
 	    "Ganti Password VPS")
