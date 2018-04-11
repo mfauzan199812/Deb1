@@ -31,7 +31,7 @@ done
 echo "-------------------------------------------------------------" | lolcat
 echo ""
 echo ""
-echo "                 [ Checking OpenSSH login ]                  " | lolcat
+echo "                 [ Checking OpenSSH login ]                  "; | lolcat
 echo "-------------------------------------------------------------" | lolcat
 echo " Date-Time    |    PID   |    User Name    |     Dari IP " | lolcat
 echo "-------------------------------------------------------------" | lolcat
