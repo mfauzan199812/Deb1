@@ -282,8 +282,11 @@ echo "-------------------------------------------------------------------     " 
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          " | lolcat
-	echo " Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali" | lolcat
-	break
+	echo "                                    _\|/_                               " | lolcat
+echo "                                    (o o)                               " | lolcat
+echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+echo "             + AUTO REBOOT 24 JAM SEKALI SUDAH AKTIF +                  " | lolcat
+echo "-------------------------------------------------------------------     " | lolcatbreak
 	;;
 	"Melihat Log Auto Reboot VPS")
 	clear
