@@ -24,8 +24,8 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo "--------------------------- AUTO GENERATE AKUN SSH ---------------------------"
-echo "                DEVELOPED BY Mohammad Fauzan R (089570379692)                    "
+echo "--------------------------- AUTO GENERATE AKUN SSH ---------------------------" | lolcat
+echo "                DEVELOPED BY Mohammad Fauzan R (089570379692)                    " | lolcat
 echo ""
 read -p "Berapa jumlah akun yang akan dibuat: " JUMLAH
 read -p "Berapa hari akun aktif: " AKTIF
@@ -34,16 +34,16 @@ today="$(date +"%Y-%m-%d")"
 expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 
 echo ""
-echo "======================================"
-echo "Data Login SSH PREMIUM"
-echo "-------------------------------------"
-echo "Host/IP: $MYIP"
-echo "    Dropbear Port: 22507, 109, 110, 80"
-echo "    OpenSSH Port: 22,143"
-echo "    SSL/TLS Port: 443"
-echo "    Port OVPN: 5555"
-echo "    Squid Proxy: 8000, 8080, 3128"
-echo "    OpenVPN Config: http://$MYIP:81/client.ovpn"
+echo "======================================" | lolcat
+echo "Data Login SSH PREMIUM" | lolcat
+echo "-------------------------------------" | lolcat
+echo "Host/IP: $MYIP" | lolcat
+echo "    Dropbear Port: 22507, 109, 110, 80" | lolcat
+echo "    OpenSSH Port: 22,143" | lolcat
+echo "    SSL/TLS Port: 443" | lolcat
+echo "    Port OVPN: 5555" | lolcat
+echo "    Squid Proxy: 8000, 8080, 3128" | lolcat
+echo "    OpenVPN Config: http://$MYIP:81/client.ovpn" | lolcat
 
 for (( i=1; i <= $JUMLAH; i++ ))
 do
@@ -52,15 +52,15 @@ do
 	#PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
 	echo $USER:$USER | chpasswd
 	
-	echo "$i. Username/Password: $USER"
+	echo "$i. Username/Password: $USER" | lolcat
 done
 
-echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%b-%Y")"
-echo -e "-------------------------------------"
-echo -e "======================================"
-echo -e "Baca & Patuhi TOS/Terms Of Service"
-echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-echo -e "-------------------------------------"
-echo -e "_________Powered BY BogelSSH_________"
-echo -e "======================================"
+echo "Masa Aktif sampai : $(date -d "$AKTIF days" +"%d-%b-%Y")" | lolcat
+echo -e "-------------------------------------" | lolcat
+echo -e "======================================" | lolcat
+echo -e "Baca & Patuhi TOS/Terms Of Service" | lolcat
+echo -e " NO CARDING, TORRENT, ILEGAL CONTENT" | lolcat
+echo -e "-------------------------------------" | lolcat
+echo -e "_________Powered BY BogelSSH_________" | lolcat
+echo -e "======================================" | lolcat
 echo ""
