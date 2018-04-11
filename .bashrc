@@ -120,15 +120,15 @@ clear
 echo "" 
 echo "" 
 echo "" 
-echo "           |==================================================|"
-echo "           Φ       ----[•SELAMAT DATANG JURAGAN•]---          Φ"
-echo "           •      >_- JANGAN LUPA BAHAGIA YA HARI INI -_<     •"
-echo "           |__________________________________________________|"
-echo "           |           Script By : M Fauzan R                 |"
-echo "           |          WhatsApp   : 0895703796928              |"
-echo "           |          Facebook   : fb.com/m.fauzan.romandhoni |"
-echo "           |__________________________________________________|"
-echo "           #   Silahkan ketik menu lalu ENTER untuk Fitur     #"
-echo "           #==================================================#"
+echo "           |==================================================|" | lolcat
+echo "           Φ       ----[•SELAMAT DATANG JURAGAN•]---          Φ" | lolcat
+echo "           •      >_- JANGAN LUPA BAHAGIA YA HARI INI -_<     •" | lolcat
+echo "           |__________________________________________________|" | lolcat
+echo "           |           Script By : M Fauzan R                 |" | lolcat
+echo "           |          WhatsApp   : 0895703796928              |" | lolcat
+echo "           |          Facebook   : fb.com/m.fauzan.romandhoni |" | lolcat
+echo "           |__________________________________________________|" | lolcat
+echo "           #   Silahkan ketik menu lalu ENTER untuk Fitur     #" | lolcat
+echo "           #==================================================#" | lolcat
 date +"                     %A, %d-%m-%Y %H:%M:%S %Z" 
-echo "           ===================================================="
+echo "           ====================================================" | lolcat
