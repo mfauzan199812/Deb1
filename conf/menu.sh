@@ -44,25 +44,25 @@ vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of result
 echo -e ""
-echo -e "____________________|•Welcome To Server Premium BogelSSH Team•|_________________________" | lolcat
-echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________" | lolcat
-echo -e "              ============= Os Debian 7 32-bit & 64-bit =============" | lolcat
-echo -e "                                 | Modder Script |" | lolcat
-echo -e "                        Mohammad Fauzan R | Wa 0895703796928" | lolcat
-echo -e "                              ----------------------" | lolcat
-echo -e "                             |  Information System  |" | lolcat
-echo -e "                      ---------------------------------------" | lolcat
-echo -e "                           | \e[032;1mServer Ip:\e[0m $MYIP |" | lolcat
-echo -e "               \e[032;1mCPU model:\e[0m $cname" | lolcat
-echo -e "                                \e[032;1mNumber of cores:\e[0m $cores" | lolcat
-echo -e "                           \e[032;1mCPU frequency:\e[0m $freq MHz" | lolcat
-echo -e "                          \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
-echo -e "                          \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
-echo -e "                          \e[032;1mSystem uptime:\e[0m $up" | lolcat
-echo -e "          ----------------------------------------------------------------" | lolcat
+echo -e "__________________|•Welcome To Server Premium BogelSSH Team•|_______________________" | lolcat
+echo -e "____________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>_________________________" | lolcat
+echo -e "            ============= Os Debian 7 32-bit & 64-bit =============" | lolcat
+echo -e "                               | Modder Script |" | lolcat
+echo -e "                      Mohammad Fauzan R | Wa 0895703796928" | lolcat
+echo -e "                            ----------------------" | lolcat
+echo -e "                           |  Information System  |" | lolcat
+echo -e "                    ---------------------------------------" | lolcat
+echo -e "                         | \e[032;1mServer Ip:\e[0m $MYIP |" | lolcat
+echo -e "             \e[032;1mCPU model:\e[0m $cname" | lolcat
+echo -e "                            \e[032;1mNumber of cores:\e[0m $cores" | lolcat
+echo -e "                         \e[032;1mCPU frequency:\e[0m $freq MHz" | lolcat
+echo -e "                        \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
+echo -e "                        \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
+echo -e "                        \e[032;1mSystem uptime:\e[0m $up" | lolcat
+echo -e "        ----------------------------------------------------------------" | lolcat
 echo -e "                 Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?" | lolcat
 echo -e "                    __________________________________________" | lolcat
-echo -e "_______________________________________________________________________________________" | lolcat
+echo -e "___________________________________________________________________________________" | lolcat
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan :'
 options=("Create Akun SSH & OVPN" "Create Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Kapasitas Hardisk" "Cek Memory Ram" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek Semua Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Auto Reboot VPS 12 Jam Sekali" "Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Quit")
 select opt in "${options[@]}"
