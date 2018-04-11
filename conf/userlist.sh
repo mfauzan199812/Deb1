@@ -35,7 +35,7 @@ do
 		fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 500 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo "-------------------------------"
+echo "-------------------------------" | lolcat
 echo "Jumlah Akun: $JUMLAH User" | lolcat
-echo "-------------------------------"
+echo "-------------------------------" | lolcat
 echo ""
