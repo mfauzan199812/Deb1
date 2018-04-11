@@ -99,7 +99,7 @@ clear
 # text warna
 cd
 rm -rf .bashrc
-wget https://raw.githubusercontent.com/mfauzan199812/Deb1/tree/master/text-20warna/.bashrc && bash .bashrc
+wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/.bashrc && bash .bashrc
 clear
 
 # Web Server
