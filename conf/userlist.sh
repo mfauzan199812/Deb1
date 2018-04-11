@@ -19,14 +19,12 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo "--------------------- MELIHAT SEMUA AKUN SSH & OVPN -----------------------"
-
-
-	echo "            DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+echo "--------------------- MELIHAT SEMUA AKUN SSH & OVPN -----------------------" | lolcat
+echo "              DEVELOPED BY Mohammad Fauzan R (089570379692)            " | lolcat
 echo ""
-echo "-------------------------------"
-echo "USERNAME        TANGGAL EXPIRED"
-echo "-------------------------------"
+echo "-------------------------------" | lolcat
+echo "USERNAME        TANGGAL EXPIRED" | lolcat
+echo "-------------------------------" | lolcat
 while read mfauzan
 do
         AKUN="$(echo $mfauzan | cut -d: -f1)"
@@ -38,6 +36,6 @@ do
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 500 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "-------------------------------"
-echo "Jumlah Akun: $JUMLAH User"
+echo "Jumlah Akun: $JUMLAH User" | lolcat
 echo "-------------------------------"
 echo ""
