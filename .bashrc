@@ -115,7 +115,7 @@ purple='\e[1;35m'
 cyan='\e[1;36m'
 red='\e[1;32m'
 
-#echo -e $green' ☠>_________________'
+#echo -e $green' ☠>___________________'
 clear
 echo "" 
 echo "" 
