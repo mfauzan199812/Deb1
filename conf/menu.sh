@@ -44,27 +44,27 @@ vram=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	# Output of result
 echo -e ""
-echo -e "${green}____________________|•Welcome To Server Premium BogelSSH Team•|_________________________${NC}"
-echo -e "${red}______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________${NC}"
-echo -e "${green}              ============= Os Debian 7 32-bit & 64-bit =============${NC}"
-echo -e "${red}                                 | Modder Script |${NC}"
-echo -e "${green}                        Mohammad Fauzan R | Wa 0895703796928${NC}"
-echo -e "${red}                              ----------------------${NC}"
-echo -e "                             |  Information System  |${NC}"
-echo -e "${red}                      ---------------------------------------${NC}"
-echo -e "                           | \e[032;1mServer Ip:\e[0m $MYIP |"
-echo -e "               \e[032;1mCPU model:\e[0m $cname"
-echo -e "                                \e[032;1mNumber of cores:\e[0m $cores"
-echo -e "                           \e[032;1mCPU frequency:\e[0m $freq MHz"
-echo -e "                          \e[032;1mTotal amount of ram:\e[0m $tram MB"
-echo -e "                          \e[032;1mTotal amount of swap:\e[0m $vram MB"
-echo -e "                          \e[032;1mSystem uptime:\e[0m $up$"
-echo -e "${red}          ----------------------------------------------------------------${NC}"
-echo -e "                 ${green}Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?${NC}"
-echo -e "${red}                    __________________________________________${NC}"
-echo -e "${green}_______________________________________________________________________________________${NC}"
+echo -e "____________________|•Welcome To Server Premium BogelSSH Team•|_________________________" | lolcat
+echo -e "______________________<<< Jangan Lupa Bahagia Ea Hari Ini >>>___________________________" | lolcat
+echo -e "              ============= Os Debian 7 32-bit & 64-bit =============" | lolcat
+echo -e "                                 | Modder Script |" | lolcat
+echo -e "                        Mohammad Fauzan R | Wa 0895703796928$" | lolcat
+echo -e "                              ----------------------" | lolcat
+echo -e "                             |  Information System  |" | lolcat
+echo -e "                      ---------------------------------------" | lolcat
+echo -e "                           | \e[032;1mServer Ip:\e[0m $MYIP |" | lolcat
+echo -e "               \e[032;1mCPU model:\e[0m $cname" | lolcat
+echo -e "                                \e[032;1mNumber of cores:\e[0m $cores" | lolcat
+echo -e "                           \e[032;1mCPU frequency:\e[0m $freq MHz" | lolcat
+echo -e "                          \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
+echo -e "                          \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
+echo -e "                          \e[032;1mSystem uptime:\e[0m $up$" | lolcatlolcat
+echo -e "          ----------------------------------------------------------------" | 
+echo -e "                 Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan?" | lolcat
+echo -e "                    __________________________________________" | lolcat
+echo -e "_______________________________________________________________________________________" | lolcat
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan :'
-options=("Buat Akun SSH & OVPN" "Buat Akun Trial SSH & OVPN" "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Kapasitas Hardisk" "Cek Memory Ram" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek Semua Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Nyalakan Auto Reboot VPS 12 Jam Sekali" "Nyalakan Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Quit")
+options=("Buat Akun SSH & OVPN" | lolcat "Buat Akun Trial SSH & OVPN" | lolcat "Generate Akun SSH & OVPN" "Perbarui Masa Aktif Akun" "Hapus Akun SSH & OVPN" "Ganti Password Akun SSH & OVPN" "Lihat Semua Akun SSH & OVPN" "Lihat Semua Akun Yang Expired" "Kunci Akun Yang Sudah Expired" "Hapus Akun Yang Sudah Expired" "Monitor Akun Yang Login" "Sleding Akun Yang Multi Login" "On Autokill" "Off Autokill" "Kapasitas Hardisk" "Cek Memory Ram" "Ram Status" "Hapus Cache Ram" "Penggunaan Data Oleh User" "Cek Semua Program" "Cek Port Aktif" "Banned Akun SSH & OVPN" "Unbanned Akun SSH & OVPN" "Test Kecepatan Server" "Edit Baner Login" "Auto Reboot VPS 12 Jam Sekali" "Auto Reboot VPS 24 Jam Sekali" "Melihat Log Auto Reboot VPS" "Off Auto Reboot VPS" "Ganti Password VPS" "Lihat Lokasi User" "Restart Server [reboot]" "Restart Webmin [service webmin restart]" "Restart Dropbear [service dropbear restart]" "Restart Squid [service squid restart]" "Restart Semuanya" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -112,11 +112,11 @@ do
 	     clear
 	    lock
 	    clear
-	    echo "                                    _\|/_                               "
-echo "                                    (o o)                               "
-echo "---------------------------------o00-{_}-00o-----------------------     "
-echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             "
-echo "-------------------------------------------------------------------     "
+echo "                                    _\|/_                               " | lolcat
+echo "                                    (o o)                               " | lolcat
+echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             " | lolcat
+echo "-------------------------------------------------------------------     " | lolcat
 	    break
 	    ;;
 	    "Hapus Akun Yang Sudah Expired")
@@ -136,8 +136,8 @@ echo "-------------------------------------------------------------------     "
 			;;	
 			"On Autokill")
 		clear 
-echo "--------------------- MENGAKTIFKAN AUTOKILL ----------------------"
-echo "          MODIFIED BY Mohammad Fauzan R (089570379692)              "
+echo "--------------------- MENGAKTIFKAN AUTOKILL ----------------------" | lolcat
+echo "          MODIFIED BY Mohammad Fauzan R (089570379692)              " | lolcat
 echo ""
 read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
 echo "* * * * * root /usr/local/bin/userlimit $MULTILOGIN2" > /etc/cron.d/userlimit1
@@ -156,11 +156,11 @@ service cron restart
 service ssh restart
 service dropbear restart
 clear
-echo "                                    _\|/_                               "
-echo "                                    (o o)                               "
-echo "---------------------------------o00-{_}-00o-----------------------     "
-echo " + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +      "
-echo "-------------------------------------------------------------------     "
+echo "                                    _\|/_                               " | lolcat
+echo "                                    (o o)                               " | lolcat
+echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+echo " + AUTO KILL SUDAH DI AKTIFKAN BOSKU, JANGAN LUPA DINON AKTIFKAN +      " | lolcat
+echo "-------------------------------------------------------------------     " | lolcat
 			break
 			;;	
 			"Off Autokill")
@@ -176,11 +176,11 @@ echo "-------------------------------------------------------------------     "
 	    service dropbear restart
 	clear
 clear
-echo "                                    _\|/_                               "
-echo "                                    (o o)                               "
-echo "---------------------------------o00-{_}-00o-----------------------     "
-echo " + AUTO KILL SUDAH DI NONAKTIFKAN BOSKU, JANGAN LUPA DI AKTIFKAN +      "
-echo "-------------------------------------------------------------------     "
+echo "                                    _\|/_                               " | lolcat
+echo "                                    (o o)                               " | lolcat
+echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+echo " + AUTO KILL SUDAH DI NONAKTIFKAN BOSKU, JANGAN LUPA DI AKTIFKAN +      " | lolcat
+echo "-------------------------------------------------------------------     " | lolcat
 			break
 			;;	
                 "Auto Install Script TLS/SSL")
@@ -220,9 +220,9 @@ echo "-------------------------------------------------------------------     "
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
 	echo ""
-	echo "Sesudah......" 
+	echo "Sesudah......"  | lolcat
 	free -h
-	echo "SUKSES EA SOB..!!! Cache Ram Anda Sudah Di Bersihkan."
+	echo "SUKSES EA SOB..!!! Cache Ram Anda Sudah Di Bersihkan." | lolcat
         break
 	;;
         "Penggunaan Data Oleh User")
@@ -258,13 +258,13 @@ echo "-------------------------------------------------------------------     "
            ;;
             "Edit Baner Login")
 	clear
-	echo "----------------------MENGEDIT BANER LOGIN-----------------------"
-	echo "           MODIFIED BY Mohammad Fauzan R (089570379692)              "
+	echo "----------------------MENGEDIT BANER LOGIN-----------------------" | lolcat
+	echo "           MODIFIED BY Mohammad Fauzan R (089570379692)              " | lolcat
 	echo ""
-	echo "-----------------------------------------------------------------"
+	echo "-----------------------------------------------------------------" | lolcat
 	echo -e "1.) Simpan text (CTRL + X, lalu ketik Y dan tekan Enter) "
 	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)"
-	echo "-----------------------------------------------------------------"
+	echo "-----------------------------------------------------------------"| lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ "
 	nano /etc/baner
 	service dropbear restart && service ssh restart
@@ -272,33 +272,33 @@ echo "-------------------------------------------------------------------     "
 	;;
 	"Nyalakan Auto Reboot VPS 12 Jam Sekali")
 	clear
-	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------"
-	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                           "
+	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------" | lolcat
+	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                           " | lolcat
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali"
+	echo "Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali" | lolcat
 	break
 	;;
 	"Nyalakan Auto Reboot VPS 1 Hari Sekali")
 	clear
-	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------"
-	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          "
+	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------" | lolcat
+	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          " | lolcat
 	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
 	echo "Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali"
 	break
 	;;
 	"Melihat Log Auto Reboot VPS")
 	clear
-	echo "----------------------MELIHAT LOG AUTOREBOOT VPS-----------------------"
-	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)                 "
+	echo "----------------------MELIHAT LOG AUTOREBOOT VPS-----------------------" | lolcat
+	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)                 " | lolcat
 	cat /root/log-reboot.txt
 	break
 	;;
 	"Off Auto Reboot VPS")
 	clear
-	echo "----------------------MEMATIKAN AUTOREBOOT VPS-----------------------"
-	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)               "
+	echo "----------------------MEMATIKAN AUTOREBOOT VPS-----------------------" | lolcat
+	echo "             MODIFIED BY Mohammad Fauzan R (089570379692)               " | lolcat
 	rm -f /etc/cron.d/reboot_otomatis
-	echo "Auto Reboot Berhasil Dimatikan"
+	echo "Auto Reboot Berhasil Dimatikan" | lolcat
 	break
 	;;
 	    "Ganti Password VPS")
