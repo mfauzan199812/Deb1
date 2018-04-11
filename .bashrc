@@ -121,12 +121,13 @@ echo ""
 echo "" 
 echo "" 
 echo "           |==================================================|" | lolcat
-echo "           '         ----[•SELAMAT DATANG JURAGAN•]---        '" | lolcat
-echo "           <      >_- JANGAN LUPA BAHAGIA YA HARI INI -_<     >" | lolcat
+echo "           ')        ----[•SELAMAT DATANG JURAGAN•]---       ('" | lolcat
+echo "           >_-        JANGAN LUPA BAHAGIA YA HARI INI       -_<" | lolcat
 echo "           |==================================================|" | lolcat
-echo "           |           Script By : M Fauzan R                 |" | lolcat
-echo "           |          WhatsApp   : 0895703796928              |" | lolcat
-echo "           |          Facebook   : fb.com/m.fauzan.romandhoni |" | lolcat
+echo "           |           SCRIPT BY : M Fauzan R                 |" | lolcat
+echo "           |          WHATSAPP   : 0895703796928              |" | lolcat
+echo "           |          FACEBOOK   : fb.com/m.fauzan.romandhoni |" | lolcat
+echo "           |          SYSTEM OS  : DEBIAN 7 32/64 bit         |" | lolcat
 echo "           |__________________________________________________|" | lolcat
 echo "           #   Silahkan ketik menu lalu ENTER untuk Fitur     #" | lolcat
 echo "           #==================================================#" | lolcat
