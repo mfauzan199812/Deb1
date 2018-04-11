@@ -124,7 +124,7 @@ echo "           |==================================================|" | lolcat
 echo "           ')        ----[•SELAMAT DATANG JURAGAN•]---       ('" | lolcat
 echo "           >_-        JANGAN LUPA BAHAGIA YA HARI INI       -_<" | lolcat
 echo "           |==================================================|" | lolcat
-echo "           |           SCRIPT BY : M Fauzan R                 |" | lolcat
+echo "           |          SCRIPT BY  : M Fauzan R                 |" | lolcat
 echo "           |          WHATSAPP   : 0895703796928              |" | lolcat
 echo "           |          FACEBOOK   : fb.com/m.fauzan.romandhoni |" | lolcat
 echo "           |          SYSTEM OS  : DEBIAN 7 32/64 bit         |" | lolcat
