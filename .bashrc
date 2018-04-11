@@ -121,17 +121,17 @@ echo ""
 echo "" 
 echo "" 
 echo "" 
-echo "           |==================================================|" | lolcat
-echo "           ')   ---[• SELAMAT DATANG PARA JURAGAN VPS •]---   ('" | lolcat
-echo "           >_-        JANGAN LUPA BAHAGIA YA HARI INI       -_<" | lolcat
-echo "           |==================================================|" | lolcat
-echo "           |   EDITOR SCRIPT BY  : M FAUZAN ROMANDHONI        |" | lolcat
-echo "           |     AKUN WHATSAPP   : 0895703796928              |" | lolcat
-echo "           |     AKUN FACEBOOK   : fb.com/m.fauzan.romandhoni |" | lolcat
-echo "           |   FITUR OS SYSTEM   : DEBIAN 7 32-bit & 64-bit   |" | lolcat
-echo "           |    SCRIPT VERSION   : V1.2 SSL + OCS PANEL FIXED |" | lolcat
-echo "           |__________________________________________________|" | lolcat
-echo "           |    Silahkan ketik menu lalu ENTER untuk Fitur    |" | lolcat
-echo "           |==================================================|" | lolcat
-date +"                    %A, %d-%m-%Y %H:%M:%S %Z          " | lolcat
-echo "           |==================================================|" | lolcat
+echo "           |======================================================|" | lolcat
+echo "           ')     ---[• SELAMAT DATANG PARA JURAGAN VPS •]---     ('" | lolcat
+echo "           >_-          JANGAN LUPA BAHAGIA YA HARI INI          -_<" | lolcat
+echo "           |======================================================|" | lolcat
+echo "           |     EDITOR SCRIPT BY  : M FAUZAN ROMANDHONI          |" | lolcat
+echo "           |       AKUN WHATSAPP   : 0895703796928                |" | lolcat
+echo "           |       AKUN FACEBOOK   : fb.com/m.fauzan.romandhoni.  |" | lolcat
+echo "           |     FITUR OS SYSTEM   : DEBIAN 7 32-bit & 64-bit.    |" | lolcat
+echo "           |      SCRIPT VERSION   : V1.2 SSL + OCS PANEL FIXED.  |" | lolcat
+echo "           |______________________________________________________|" | lolcat
+echo "           |  Silahkan ketik menu lalu ENTER untuk Fitur Lainnya  |" | lolcat
+echo "           |======================================================|" | lolcat
+date +"                        %A, %d-%m-%Y %H:%M:%S %Z                      " | lolcat
+echo "           |======================================================|" | lolcat
