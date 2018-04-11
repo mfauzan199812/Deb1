@@ -20,14 +20,12 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo "------------------------ MELIHAT SEMUA AKUN YANG EXPIRED ------------------------"
-
-
-	echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)              "
+echo "------------------------ MELIHAT SEMUA AKUN YANG EXPIRED ------------------------"  | lolcat
+echo "                  DEVELOPED BY Mohammad Fauzan R (089570379692)              " | lolcat
 echo ""
-echo "---------------------------------"
-echo "BIL  USERNAME          EXPIRED "
-echo "---------------------------------"
+echo "---------------------------------" | lolcat
+echo "BIL  USERNAME          EXPIRED " | lolcat
+echo "---------------------------------" | lolcat
 count=1
 	cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
 	totalaccounts=`cat /tmp/expirelist.txt | wc -l`
