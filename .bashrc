@@ -131,5 +131,5 @@ echo "           |          SYSTEM OS  : DEBIAN 7 32/64 bit         |" | lolcat
 echo "           |__________________________________________________|" | lolcat
 echo "           |   Silahkan ketik menu lalu ENTER untuk Fitur     |" | lolcat
 echo "           |==================================================|" | lolcat
-date +"           |         %A, %d-%m-%Y %H:%M:%S %Z          |" | lolcat
+date +"                     %A, %d-%m-%Y %H:%M:%S %Z          " | lolcat
 echo "           |==================================================|" | lolcat
