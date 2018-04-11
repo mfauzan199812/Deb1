@@ -275,7 +275,11 @@ echo "-------------------------------------------------------------------     " 
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 12 JAM SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                           " | lolcat
 	echo "0 */12 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "                  Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali" | lolcat
+	echo "                                    _\|/_                               " | lolcat
+        echo "                                    (o o)                               " | lolcat
+        echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+        echo "             + AUTO REBOOT 24 JAM SEKALI SUDAH AKTIF +                  " | lolcat
+        echo "-------------------------------------------------------------------     " | lolcat
 	break
 	;;
 	"Auto Reboot VPS 24 Jam Sekali")
@@ -283,10 +287,11 @@ echo "-------------------------------------------------------------------     " 
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          " | lolcat
 	echo "                                    _\|/_                               " | lolcat
-echo "                                    (o o)                               " | lolcat
-echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
-echo "             + AUTO REBOOT 24 JAM SEKALI SUDAH AKTIF +                  " | lolcat
-echo "-------------------------------------------------------------------     " | lolcatbreak
+        echo "                                    (o o)                               " | lolcat
+        echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+        echo "             + AUTO REBOOT 24 JAM SEKALI SUDAH AKTIF +                  " | lolcat
+        echo "-------------------------------------------------------------------     " | lolcat
+	break
 	;;
 	"Melihat Log Auto Reboot VPS")
 	clear
