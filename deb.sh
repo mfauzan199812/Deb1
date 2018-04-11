@@ -284,6 +284,9 @@ sysctl vm.swappiness=20
 chown root:root /swapfile 
 chmod 0600 /swapfile
 
+# install teks berwarna
+apt-get -y install ruby
+gem install lolcat
 
  # finishing
 chown -R www-data:www-data /home/vps/public_html
