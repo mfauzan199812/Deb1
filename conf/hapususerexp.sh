@@ -68,4 +68,4 @@ do
 		userdel $username
 	fi
 done
-echo "SEMUA USER EXPIRED BERHASIL DIHAPUS !"
+echo "SEMUA USER EXPIRED BERHASIL DIHAPUS !" | lolcat
