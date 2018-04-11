@@ -21,12 +21,12 @@ if ! grep -w -q $MYIP mfauzan; then
 	exit
 fi
 
-echo "------------------------ UNBANNED USER -----------------------------"
-echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)                   "
+echo "------------------------ UNBANNED USER -----------------------------" | lolcat
+echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)                   " | lolcat
 echo ""
-echo "--------------------------------------------------------------------"
+echo "--------------------------------------------------------------------" | lolcat
 cat /root/banneduser.txt
-echo "--------------------------------------------------------------------"
+echo "--------------------------------------------------------------------" | lolcat
 echo ""
 
 read -p "Isikan username: " username
