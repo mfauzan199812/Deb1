@@ -1,19 +1,17 @@
 #!/bin/bash
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 clear
-echo "------------------------ MENGECEK USER LOGIN ------------------------"
-
-
-	echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)             "
-	echo ""
-echo "                            _\|/_                               "
-echo "                            (o o)                               "
-echo "-------------------------o00-{_}-00o-------------------------   "
-echo "=============================================================   "
-echo "                [ Checking Dropbear login ]                  ";
-echo "-------------------------------------------------------------"
-echo " Date-Time    |    PID   |    User Name    |     Dari IP "
-echo "-------------------------------------------------------------"
+echo "------------------------ MENGECEK USER LOGIN ------------------------" | lolcat
+echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)             " | lolcat
+echo ""
+echo "                            _\|/_                               " | lolcat
+echo "                            (o o)                               " | lolcat
+echo "-------------------------o00-{_}-00o-------------------------   " | lolcat
+echo "=============================================================   " | lolcat
+echo "                [ Checking Dropbear login ]                  "; | lolcat
+echo "-------------------------------------------------------------" | lolcat
+echo " Date-Time    |    PID   |    User Name    |     Dari IP " | lolcat
+echo "-------------------------------------------------------------" | lolcat
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 
@@ -30,13 +28,13 @@ do
 done
 
 
-echo "-------------------------------------------------------------"
+echo "-------------------------------------------------------------" | lolcat
 echo ""
 echo ""
-echo "                 [ Checking OpenSSH login ]                  ";
-echo "-------------------------------------------------------------"
-echo " Date-Time    |    PID   |    User Name    |     Dari IP "
-echo "-------------------------------------------------------------"
+echo "                 [ Checking OpenSSH login ]                  " | lolcat
+echo "-------------------------------------------------------------" | lolcat
+echo " Date-Time    |    PID   |    User Name    |     Dari IP " | lolcat
+echo "-------------------------------------------------------------" | lolcat
 
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 
@@ -52,4 +50,4 @@ do
         fi
 done
 
-echo "-------------------------------------------------------------"
+echo "-------------------------------------------------------------" | lolcat
