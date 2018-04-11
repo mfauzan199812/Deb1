@@ -24,8 +24,8 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo "------------------------ MEMBUAT AKUN SSH ------------------------"
-echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)           "
+echo "------------------------ MEMBUAT AKUN SSH ------------------------" | lolcat
+echo "          DEVELOPED BY Mohammad Fauzan R (089570379692)           " | lolcat
 echo ""
 
 read -p "Isikan username: " username
@@ -44,25 +44,25 @@ else
 	echo $username:$password | chpasswd
 echo -e ""
 echo -e ""
-echo -e "======================================"
-echo -e "Data Login SSH PREMIUM"
-echo -e "-------------------------------------"
-echo -e "Host/IP: $MYIP" 
-echo -e "Username: $username "
-echo -e "Password: $password"
-echo -e "    Dropbear Port: 22507, 110, 109, 80"
-echo -e "    OpenSSH Port: 22, 143"
-echo -e "    SSL/TLS Port: 443"
-echo -e "    Port OVPN: 5555"
-echo -e "    Squid Proxy: 3128, 8000, 8080"
-echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn"
-echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")"
-echo -e "-------------------------------------"
-echo -e "======================================"
-echo -e "Baca & Patuhi TOS/Terms Of Service"
-echo -e " NO CARDING, TORRENT, ILEGAL CONTENT"
-echo -e "-------------------------------------"
-echo -e "_________Powered BY BogelSSH_________"
-echo -e "======================================"
+echo -e "======================================" | lolcat
+echo -e "Data Login SSH PREMIUM" | lolcat
+echo -e "-------------------------------------" | lolcat
+echo -e "Host/IP: $MYIP" | lolcat
+echo -e "Username: $username " | lolcat
+echo -e "Password: $password" | lolcat
+echo -e "    Dropbear Port: 22507, 110, 109, 80" | lolcat
+echo -e "    OpenSSH Port: 22, 143" | lolcat
+echo -e "    SSL/TLS Port: 443" | lolcat
+echo -e "    Port OVPN: 5555" | lolcat
+echo -e "    Squid Proxy: 8000, 8080, 3128" | lolcatlolcat
+echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn" | lolcat
+echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")" | lolcat
+echo -e "-------------------------------------" | lolcat
+echo -e "======================================" | lolcat
+echo -e "Baca & Patuhi TOS/Terms Of Service" | lolcat
+echo -e " NO CARDING, TORRENT, ILEGAL CONTENT" | lolcat
+echo -e "-------------------------------------" | lolcat
+echo -e "_________Powered BY BogelSSH_________" | lolcat
+echo -e "======================================" | lolcat
 echo -e ""
 fi
