@@ -60,4 +60,4 @@ do
 		passwd -l $username
 	fi
 done
-echo "USER YANG EXPIRED BERHASIL DIKUNCI !"
+echo "USER YANG EXPIRED BERHASIL DIKUNCI !" | lolcat
