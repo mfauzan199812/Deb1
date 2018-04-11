@@ -94,6 +94,13 @@ mv screeftech-dev /usr/bin/screenfetch
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
+clear
+
+# text warna
+cd
+rm -rf .bashrc
+wget $source/master/text_20warna/.bashrc
+clear
 
 # Web Server
 cd
