@@ -117,10 +117,10 @@ red='\e[1;32m'
 
 #echo -e $green' ☠>___________________'
 clear
+echo ""
+echo ""
 echo "" 
-echo "" 
-echo "" 
-echo "" 
+echo ""
 echo "          |=====================================================|" | lolcat
 echo "          ')    ---[• SELAMAT DATANG PARA JURAGAN VPS •]---    ('" | lolcat
 echo "          >_-         JANGAN LUPA BAHAGIA YA HARI INI         -_<" | lolcat
