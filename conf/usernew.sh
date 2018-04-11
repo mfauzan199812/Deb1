@@ -54,7 +54,7 @@ echo -e "    Dropbear Port: 22507, 110, 109, 80" | lolcat
 echo -e "    OpenSSH Port: 22, 143" | lolcat
 echo -e "    SSL/TLS Port: 443" | lolcat
 echo -e "    Port OVPN: 5555" | lolcat
-echo -e "    Squid Proxy: 8000, 8080, 3128" | lolcatlolcat
+echo -e "    Squid Proxy: 8000, 8080, 3128" | lolcat
 echo -e "    Ovpn Config: http://$MYIP:81/client.ovpn" | lolcat
 echo -e "Aktif Sampai: $(date -d "$AKTIF days" +"%d-%b-%Y")" | lolcat
 echo -e "-------------------------------------" | lolcat
