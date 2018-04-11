@@ -131,7 +131,7 @@ echo "          |      AKUN FACEBOOK   : fb.com/m.fauzan.romandhoni   |" | lolca
 echo "          |    FITUR OS SYSTEM   : DEBIAN 7 32-bit & 64-bit     |" | lolcat
 echo "          |     SCRIPT VERSION   : V1.2 SSL + OCS PANEL FIXED   |" | lolcat
 echo "          |-----------------------------------------------------|" | lolcat
-echo "          |   Silahkan ketik menu lalu ENTER untuk Fitur Lain   |" | lolcat
+date +"                     %A, %d-%m-%Y %H:%M:%S %Z                   " | lolcat
 echo "          |=====================================================|" | lolcat
-date +"                     %A, %d-%m-%Y %H:%M:%S %Z                      " | lolcat
+echo "          |   Silahkan ketik menu lalu ENTER untuk Fitur Lain   |" | lolcat
 echo "          |=====================================================|" | lolcat
