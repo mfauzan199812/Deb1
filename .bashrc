@@ -121,9 +121,9 @@ echo ""
 echo "" 
 echo "" 
 echo "           |==================================================|" | lolcat
-echo "           Φ       ----[•SELAMAT DATANG JURAGAN•]---          Φ" | lolcat
-echo "           •      >_- JANGAN LUPA BAHAGIA YA HARI INI -_<     •" | lolcat
-echo "           |__________________________________________________|" | lolcat
+echo "           '         ----[•SELAMAT DATANG JURAGAN•]---        '" | lolcat
+echo "           <      >_- JANGAN LUPA BAHAGIA YA HARI INI -_<     >" | lolcat
+echo "           |==================================================|" | lolcat
 echo "           |           Script By : M Fauzan R                 |" | lolcat
 echo "           |          WhatsApp   : 0895703796928              |" | lolcat
 echo "           |          Facebook   : fb.com/m.fauzan.romandhoni |" | lolcat
