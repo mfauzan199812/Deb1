@@ -87,15 +87,6 @@ apt-file update
 vnstat -u -i $ether
 service vnstat restart
 
-# screenfetch
-cd
-wget $source/file/screeftech-dev
-mv screeftech-dev /usr/bin/screenfetch
-chmod +x /usr/bin/screenfetch
-echo "clear" >> .profile
-echo "screenfetch" >> .profile
-clear
-
 # text warna
 cd
 rm -rf .bashrc
