@@ -278,12 +278,11 @@ echo "-------------------------------------------------------------------     " 
 	echo "                  Auto Reboot Berhasil Dinyalakan Setiap 12 Jam Sekali" | lolcat
 	break
 	;;
-	"Auto Reboot VPS 24 jam Sekali")
+	"Auto Reboot VPS 24 Jam Sekali")
 	clear
 	echo "----------------------MENYALAKAN AUTO REBOOT OTOMATIS 1 HARI SEKALI-----------------------" | lolcat
 	echo "                       MODIFIED BY Mohammad Fauzan R (089570379692)                          " | lolcat
-	echo "0 0 * * * root /root/reboot_otomatis.sh" > /etc/cron.d/reboot_otomatis
-	echo "                  Auto Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali" | lolcat
+	echo " Reboot Berhasil Dinyalakan Setiap 1 Hari Sekali" | lolcat
 	break
 	;;
 	"Melihat Log Auto Reboot VPS")
