@@ -22,14 +22,14 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo "--------------------PERPANJANG MASA AKTIF AKUN-------------------"
-echo "         DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+echo "--------------------PERPANJANG MASA AKTIF AKUN-------------------" | lolcat
+echo "         DEVELOPED BY Mohammad Fauzan R (089570379692)            " | lolcat
 echo ""
 
 # begin of user-list
-echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
+echo "USERNAME              EXP DATE     " | lolcat
+echo "-----------------------------------" | lolcat
 
 while read expired
 do
@@ -40,7 +40,7 @@ do
 		printf "%-21s %2s\n" "$AKUN" "$exp"
 	fi
 done < /etc/passwd
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
 echo ""
 # end of user-list
 
@@ -59,7 +59,7 @@ fi
                 exp="$(chage -l $username | grep "Account expires" | awk -F": " '{print $2}')"
                 usermod -U -e `date -d "$tambah days $exp" +"%Y-%m-%d"` $username &> /dev/null
                 [ $? -eq 0 ] && echo "SUKSES! TGL EXPIRE LAMA: `date -d "$exp" +"%d-%b-%Y"` ========> MENJADI: `date -d "$tambah days $exp" +"%d-%b-%Y"`" || echo "Error! "
-                echo "---------------------------------------------------------------------"
+                echo "---------------------------------------------------------------------" | lolcat
         fi
 else
         echo "Hanya root yang bisa menjalankan perintah ini"
