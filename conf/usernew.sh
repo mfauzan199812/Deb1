@@ -64,5 +64,5 @@ echo -e " NO CARDING, TORRENT, ILEGAL CONTENT" | lolcat
 echo -e "-------------------------------------" | lolcat
 echo -e "_________Powered BY BogelSSH_________" | lolcat
 echo -e "======================================" | lolcat
-echo -e ""
+echo ""
 fi
