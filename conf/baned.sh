@@ -24,12 +24,12 @@ if ! grep -w -q $MYIP mfauzan; then
 	rm -f /root/mfauzan
 	exit
 fi
-echo -e "------------------ BANNED AKUN SSH & OVPN -------------------"
-echo -e "       DEVELOPED BY Mohammad Fauzan R (089570379692)            "
+echo -e "------------------ BANNED AKUN SSH & OVPN -------------------" | lolcat
+echo -e "       DEVELOPED BY Mohammad Fauzan R (089570379692)            " | lolcat
 # begin of user-list
-echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
+echo "USERNAME              EXP DATE     " | lolcat
+echo "-----------------------------------" | lolcat
 
 while read expired
 do
