@@ -25,15 +25,14 @@ if ! grep -w -q $MYIP mfauzan; then
 fi
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 
-echo "---------------------- HAPUS AKUN SSH & OVPN -----------------------"
-
-	echo "  DEVELOPED BY Mohammad Fauzan R (0895703796928)            "
+echo "---------------------- HAPUS AKUN SSH & OVPN -----------------------" | lolcat
+echo "          DEVELOPED BY Mohammad Fauzan R (0895703796928)            " | lolcat
 echo ""
 
 # begin of user-list
-echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
+echo "USERNAME              EXP DATE     " | lolcat
+echo "-----------------------------------" | lolcat
 
 while read expired
 do
@@ -44,7 +43,7 @@ do
 		printf "%-21s %2s\n" "$AKUN" "$exp"
 	fi
 done < /etc/passwd
-echo "-----------------------------------"
+echo "-----------------------------------" | lolcat
 echo ""
 # end of user-list
 
