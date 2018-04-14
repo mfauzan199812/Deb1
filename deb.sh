@@ -150,13 +150,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 service ssh restart
 service dropbear restart
 
-rm /etc/banner.txt
-wget -O /etc/banner.txt "https://raw.githubusercontent.com/mfauzan199812/Deb1/master/banner.txt"
-sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.txt"@g' /etc/default/dropbear
-service ssh restart
-service dropbear restart
-
 # upgrad
 apt-get install zlib1g-dev
 wget https://raw.githubusercontent.com/mfauzan199812/Deb1/master/file/dropbear-2016.74.tar.bz2
