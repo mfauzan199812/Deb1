@@ -138,8 +138,6 @@ cd
 sed -i '/Port 22/a Port  143' /etc/ssh/sshd_config
 #sed -i '/Port 22/a Port  80' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
-sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
-echo "Banner /etc/baner" >> /etc/ssh/sshd_config
 service ssh restart
 
 # dropbear
@@ -147,9 +145,15 @@ apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=22507/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 80 -p 110 -p 109"/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="\/etc\/baner"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
+service ssh restart
+service dropbear restart
+
+rm /etc/banner.txt
+wget -O /etc/banner.txt "https://raw.githubusercontent.com/mfauzan199812/Deb1/master/banner.txt"
+sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.txt"@g' /etc/default/dropbear
 service ssh restart
 service dropbear restart
 
@@ -240,7 +244,7 @@ wget -O- https://raw.githubusercontent.com/stylersnico/nmd/master/debian/update.
 # fail2ban
 apt-get -y install fail2ban;service fail2ban restart
 # BAANER
-wget -O /etc/baner $source/baner.txt
+wget -O /etc/baner $source/banner.txt
 # squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf $source/file/squid.conf
