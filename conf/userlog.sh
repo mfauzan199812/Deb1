@@ -2,7 +2,7 @@
 #Script By Mohammad Fauzan R (fauzan121998@gmail.com) (0895703796928)
 clear
 echo "------------------------ MENGECEK USER LOGIN ------------------------" | lolcat
-echo "           DEVELOPED BY Mohammad Fauzan R (089570379692)             " | lolcat
+echo "           DEVELOPED BY Mohammad Fauzan R (0895703796928)             " | lolcat
 echo ""
 echo "                            _\|/_                               " | lolcat
 echo "                            (o o)                               " | lolcat
