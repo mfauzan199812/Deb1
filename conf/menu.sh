@@ -58,9 +58,9 @@ echo -e "                            \e[032;1mNumber of cores:\e[0m $cores" | lo
 echo -e "                         \e[032;1mCPU frequency:\e[0m $freq MHz" | lolcat
 echo -e "                        \e[032;1mTotal amount of ram:\e[0m $tram MB" | lolcat
 echo -e "                        \e[032;1mTotal amount of swap:\e[0m $vram MB" | lolcat
-echo -e "                        \e[032;1mSystem uptime:\e[0m $up" | lolcat
+echo -e "                          \e[032;1mSystem uptime:\e[0m $up" | lolcat
 echo -e "        ----------------------------------------------------------------" | lolcat
-echo -e "                Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan!!" | lolcat
+echo -e "                 Apa Yang Ingin Anda Lakukan Sekarang Ini Soeltan!!" | lolcat
 echo -e "                    __________________________________________" | lolcat
 echo -e "___________________________________________________________________________________" | lolcat
 PS3='Silahkan Ketik Angka Pilihan Anda Lalu Enter Soeltan :'
@@ -112,16 +112,22 @@ do
 	     clear
 	    lock
 	    clear
-echo "                                    _\|/_                               " | lolcat
-echo "                                    (o o)                               " | lolcat
-echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
-echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             " | lolcat
-echo "-------------------------------------------------------------------     " | lolcat
+            echo "                                    _\|/_                               " | lolcat
+            echo "                                    (o o)                               " | lolcat
+            echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+            echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI KUNCI BOS +             " | lolcat
+            echo "-------------------------------------------------------------------     " | lolcat
 	    break
 	    ;;
 	    "Hapus Akun Yang Sudah Expired")
              clear
 	     hapususerexp
+	     clear
+            echo "                                    _\|/_                               " | lolcat
+            echo "                                    (o o)                               " | lolcat
+            echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+            echo "         + AKUN SSH & OVPN YANG EXP BERHASIL DI HAPUS BOS +             " | lolcat
+            echo "-------------------------------------------------------------------     " | lolcat
 	    break
 	    ;;
 	    "Monitor Akun Yang Login")
@@ -222,8 +228,12 @@ echo "-------------------------------------------------------------------     " 
 	echo ""
 	echo "Sesudah......"  | lolcat
 	free -h
-	echo "SUKSES EA SOB..!!! Cache Ram Anda Sudah Di Bersihkan." | lolcat
-        break
+	echo "                                    _\|/_                               " | lolcat
+        echo "                                    (o o)                               " | lolcat
+        echo "---------------------------------o00-{_}-00o-----------------------     " | lolcat
+	echo "    + SUKSES EA SOB..!!! Cache Ram Anda Sudah Di Bersihkan +            " | lolcat
+        echo "-------------------------------------------------------------------     " | lolcat
+	break
 	;;
         "Penggunaan Data Oleh User")
         myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`
@@ -240,23 +250,23 @@ echo "-------------------------------------------------------------------     " 
          clear
 	 netstat –ntulp
          break
-	 ;;
-		"Banned Akun SSH & OVPN")	
-		clear
-	    baned
-			break
-			;;
-		"Unbanned Akun SSH & OVPN")
-		clear
-	    unbaned
-			break
-			;;
+	  ;;
+        "Banned Akun SSH & OVPN")	
+         clear
+	 baned
+         break
+          ;;
+        "Unbanned Akun SSH & OVPN")
+         clear
+	 unbaned
+         break
+          ;;
         "Test Kecepatan Server")
-        clear
-	speedtest --share
-	break
+         clear
+         speedtest --share | lolcat
+         break
            ;;
-            "Edit Baner Login")
+        "Edit Baner Login")
 	clear
 	echo "----------------------MENGEDIT BANER LOGIN-----------------------" | lolcat
 	echo "           MODIFIED BY Mohammad Fauzan R (089570379692)              " | lolcat
@@ -266,7 +276,7 @@ echo "-------------------------------------------------------------------     " 
 	echo -e "2.) Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)"
 	echo "-----------------------------------------------------------------"| lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ "
-	nano /etc/baner
+	nano /etc/banner.txt
 	service dropbear restart && service ssh restart
 	break
 	;;
@@ -311,7 +321,7 @@ echo "-------------------------------------------------------------------     " 
 	    "Ganti Password VPS")
 	    read -p "Silahkan isi password baru untuk VPS anda: " pass	
             echo "root:$pass" | chpasswd
-	    echo "Password vps anda berhasil diganti menjadi $pass"
+	    echo "Password VPS Anda Berhasil Diganti Menjadi $pass" | lolcat
 	    break
 	    ;;
 	    "Lihat Lokasi User")
