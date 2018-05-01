@@ -127,11 +127,11 @@ echo "          >_-         JANGAN LUPA BAHAGIA YA HARI INI         -_<" | lolca
 echo "          |=====================================================|" | lolcat
 echo "          |    EDITOR SCRIPT BY  : M FAUZAN ROMANDHONI          |" | lolcat
 echo "          |      AKUN WHATSAPP   : 0895703796928                |" | lolcat
-echo "          |      AKUN FACEBOOK   : fb.com/m.fauzan.romandhoni   |" | lolcat
+echo "          |      AKUN FACEBOOK   : fb.com/cyb3r.n0b             |" | lolcat
 echo "          |    FITUR OS SYSTEM   : DEBIAN 7 32-bit & 64-bit     |" | lolcat
 echo "          |     SCRIPT VERSION   : V1.2 SSL + OCS PANEL FIXED   |" | lolcat
 echo "          |-----------------------------------------------------|" | lolcat
 date +"                     %A, %d-%m-%Y %H:%M:%S %Z                   " | lolcat
 echo "          |=====================================================|" | lolcat
-echo "          |   Silahkan ketik menu lalu ENTER untuk Fitur Lain   |" | lolcat
+echo -e "          |   Ketik \e[032;1mmenu\e[0m Lalu \e[031;1mENTER\e[0m Untuk Fitur Lain   |"
 echo "          |=====================================================|" | lolcat
